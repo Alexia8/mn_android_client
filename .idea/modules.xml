@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mn_android_client.iml" filepath="$PROJECT_DIR$/mn_android_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mn_core/mn_core.iml" filepath="$PROJECT_DIR$/mn_core/mn_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mn_ui/mn_ui.iml" filepath="$PROJECT_DIR$/mn_ui/mn_ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/musicnerds_app/musicnerds_app.iml" filepath="$PROJECT_DIR$/musicnerds_app/musicnerds_app.iml" />
+    </modules>
+  </component>
+</project>

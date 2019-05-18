@@ -1,0 +1,1 @@
+include ':musicnerds_app', ':mn_core', ':mn_ui', ':mn_ui'

@@ -1,0 +1,39 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation("com.squareup.retrofit2:retrofit:${retrofitVersion}") {
+        exclude module: 'okhttp'
+    }
+
+    implementation "org.koin:koin-android:${koinVersion}"
+    implementation "org.koin:koin-android-scope:${koinVersion}"
+    implementation "org.koin:koin-android-viewmodel:${koinVersion}"
+
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+
+    implementation"com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+
+    implementation "com.facebook.stetho:stetho-okhttp3:${stethoVersion}"
+
+    implementation "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+
+    api "io.reactivex.rxjava2:rxjava:${rxjava2Version}"
+
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+
+    api(group: 'org.threeten', name: 'threetenbp', version: "${threetenBPVersion}", classifier: 'no-tzdb')
+
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    testImplementation "junit:junit:${junitVersion}"
+
+    testImplementation("org.threeten:threetenbp:${threetenBPVersion}") {
+        exclude group: 'com.jakewharton.threetenabp', module: 'threetenabp'
+    }
+
+    testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+
+    testImplementation "com.squareup.okhttp3:mockwebserver:${okhttpVersion}"
+}
