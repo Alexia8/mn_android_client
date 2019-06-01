@@ -1,39 +1,27 @@
 package com.alexiacdura.musicnerds
 
 import android.app.Application
-import io.reactivex.Scheduler
-import io.reactivex.schedulers.Schedulers
+import com.alexiacdura.musicnerds.resources.KoinModules
 
 
 /**
- * Created 18/08/2018
+ * Created 15/05/2019
  * @author alexiacdura
  * @version 1.0
  *
- * Application class subscribes scheduler and where we we should check network connectivity, add other services and initialize repositories (DAO) for data offline
- * Is initiated in MainActivity
+ * Application class of Musicnerds that setups Koin in the project
  */
 
 class App : Application() {
 
-    private var scheduler: Scheduler? = null
-
     override fun onCreate() {
         super.onCreate()
-        instance = this
+
+        setupKoin(instance)
     }
 
-
-    /**
-     * Return method that returns Application scheduler
-     *
-     * @return Scheduler
-     */
-    fun subscribeScheduler(): Scheduler? {
-        if (scheduler == null) {
-            scheduler = Schedulers.io()
-        }
-        return scheduler
+    private fun setupKoin(app: App) {
+        KoinModules.setup(app)
     }
 
     companion object {

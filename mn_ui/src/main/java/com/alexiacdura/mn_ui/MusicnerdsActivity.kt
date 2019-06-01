@@ -7,6 +7,9 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.ActionBar
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
+import com.alexiacdura.mn_core.core.koin.KoinScopes
+import com.alexiacdura.mn_ui.Utils.resources.AppConstants
+import com.alexiacdura.mn_ui.Utils.koin.bindNamedScope
 import kotlinx.android.synthetic.main.activity_musicnerds.*
 
 
