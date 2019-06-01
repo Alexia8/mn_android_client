@@ -1,0 +1,878 @@
+[
+  {
+    "id": 1,
+    "date": 1554913913,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 1,
+      "title": "BANKS - Gemini Feed",
+      "imageUrl": "https://i.ytimg.com/vi/2IeyrEUkBSk/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=2IeyrEUkBSk",
+      "postGenres": [
+        {
+          "postId": 1,
+          "genreId": 232,
+          "genre": {
+            "id": 232,
+            "name": "Electronic music",
+            "styleId": 17,
+            "style": {
+              "id": 17,
+              "name": "Electronica",
+              "genres": [
+
+              ]
+            }
+          }
+        },
+        {
+          "postId": 1,
+          "genreId": 434,
+          "genre": {
+            "id": 434,
+            "name": "R&B music",
+            "styleId": 30,
+            "style": {
+              "id": 30,
+              "name": "R&B",
+              "genres": [
+
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 1,
+    "stars": [
+      {
+        "id": 3,
+        "date": 1554985913,
+        "feedPostId": 1,
+        "user": {
+          "id": 2,
+          "username": "Mircea Teodor Oprea",
+          "email": "mirceateodor.oprea@gmail.com"
+        },
+        "userId": 2
+      },
+      {
+        "id": 4,
+        "date": 1555199813,
+        "feedPostId": 1,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1
+      }
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 3,
+        "upvote": 1,
+        "date": 1554985913,
+        "user": {
+          "id": 2,
+          "username": "Mircea Teodor Oprea",
+          "email": "mirceateodor.oprea@gmail.com"
+        },
+        "userId": 2,
+        "feedPostId": 1
+      }
+    ],
+    "comments": [
+
+    ]
+  },
+  {
+    "id": 2,
+    "date": 1554985913,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 2,
+      "title": "Aerosmith - Baby, Please Don&#39;t Go",
+      "imageUrl": "https://i.ytimg.com/vi/9r25eLFBAc4/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=9r25eLFBAc4",
+      "postGenres": [
+        {
+          "postId": 2,
+          "genreId": 79,
+          "genre": {
+            "id": 79,
+            "name": "Blues Rock",
+            "styleId": 5,
+            "style": {
+              "id": 5,
+              "name": "Blues",
+              "genres": [
+                {
+                  "id": 77,
+                  "name": "Blues Music",
+                  "styleId": 5
+                },
+                {
+                  "id": 101,
+                  "name": "Soul blues",
+                  "styleId": 5
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 2,
+          "genreId": 467,
+          "genre": {
+            "id": 467,
+            "name": "Hard rock",
+            "styleId": 32,
+            "style": {
+              "id": 32,
+              "name": "Rock",
+              "genres": [
+                {
+                  "id": 449,
+                  "name": "Alternative rock",
+                  "styleId": 32
+                },
+                {
+                  "id": 453,
+                  "name": "Indie rock",
+                  "styleId": 32
+                },
+                {
+                  "id": 474,
+                  "name": "Psychedelic rock",
+                  "styleId": 32
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 2,
+    "stars": [
+
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 8,
+        "upvote": 0,
+        "date": 1555169453,
+        "user": {
+          "id": 2,
+          "username": "Mircea Teodor Oprea",
+          "email": "mirceateodor.oprea@gmail.com"
+        },
+        "userId": 2,
+        "feedPostId": 2
+      }
+    ],
+    "comments": [
+
+    ]
+  },
+  {
+    "id": 3,
+    "date": 1555096253,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 3,
+      "title": "Benny Benassi - California Dreaming 2004(Remix)",
+      "imageUrl": "https://i.ytimg.com/vi/sTbd2e2EyTk/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=sTbd2e2EyTk",
+      "postGenres": [
+        {
+          "postId": 3,
+          "genreId": 227,
+          "genre": {
+            "id": 227,
+            "name": "Electro house",
+            "styleId": 16,
+            "style": {
+              "id": 16,
+              "name": "Electro",
+              "genres": [
+
+              ]
+            }
+          }
+        },
+        {
+          "postId": 3,
+          "genreId": 252,
+          "genre": {
+            "id": 252,
+            "name": "House music",
+            "styleId": 19,
+            "style": {
+              "id": 19,
+              "name": "House",
+              "genres": [
+                {
+                  "id": 264,
+                  "name": "Progressive house",
+                  "styleId": 19
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 3,
+          "genreId": 264,
+          "genre": {
+            "id": 264,
+            "name": "Progressive house",
+            "styleId": 19,
+            "style": {
+              "id": 19,
+              "name": "House",
+              "genres": [
+                {
+                  "id": 252,
+                  "name": "House music",
+                  "styleId": 19
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 3,
+    "stars": [
+      {
+        "id": 5,
+        "date": 1555169453,
+        "feedPostId": 3,
+        "user": {
+          "id": 2,
+          "username": "Mircea Teodor Oprea",
+          "email": "mirceateodor.oprea@gmail.com"
+        },
+        "userId": 2
+      }
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 4,
+        "upvote": 1,
+        "date": 1555169453,
+        "user": {
+          "id": 2,
+          "username": "Mircea Teodor Oprea",
+          "email": "mirceateodor.oprea@gmail.com"
+        },
+        "userId": 2,
+        "feedPostId": 3
+      }
+    ],
+    "comments": [
+
+    ]
+  },
+  {
+    "id": 4,
+    "date": 1555169453,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 4,
+      "title": "Tinush - Struggle (feat Aretha Franklin)",
+      "imageUrl": "https://i.ytimg.com/vi/7BrcfBUlVu8/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=7BrcfBUlVu8",
+      "postGenres": [
+        {
+          "postId": 4,
+          "genreId": 232,
+          "genre": {
+            "id": 232,
+            "name": "Electronic music",
+            "styleId": 17,
+            "style": {
+              "id": 17,
+              "name": "Electronica",
+              "genres": [
+
+              ]
+            }
+          }
+        },
+        {
+          "postId": 4,
+          "genreId": 266,
+          "genre": {
+            "id": 266,
+            "name": "Dance music",
+            "styleId": 20,
+            "style": {
+              "id": 20,
+              "name": "Dance",
+              "genres": [
+
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 4,
+    "stars": [
+      {
+        "id": 8,
+        "date": 1555199813,
+        "feedPostId": 4,
+        "user": {
+          "id": 2,
+          "username": "Mircea Teodor Oprea",
+          "email": "mirceateodor.oprea@gmail.com"
+        },
+        "userId": 2
+      }
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 10,
+        "upvote": 1,
+        "date": 1555199813,
+        "user": {
+          "id": 2,
+          "username": "Mircea Teodor Oprea",
+          "email": "mirceateodor.oprea@gmail.com"
+        },
+        "userId": 2,
+        "feedPostId": 4
+      }
+    ],
+    "comments": [
+
+    ]
+  },
+  {
+    "id": 5,
+    "date": 1555890108,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 6,
+      "title": "Mild Orange - Some Feeling",
+      "imageUrl": "https://i.ytimg.com/vi/6I44IYGyB_4/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=6I44IYGyB_4",
+      "postGenres": [
+        {
+          "postId": 6,
+          "genreId": 420,
+          "genre": {
+            "id": 420,
+            "name": "Indie pop",
+            "styleId": 29,
+            "style": {
+              "id": 29,
+              "name": "Pop",
+              "genres": [
+
+              ]
+            }
+          }
+        },
+        {
+          "postId": 6,
+          "genreId": 449,
+          "genre": {
+            "id": 449,
+            "name": "Alternative rock",
+            "styleId": 32,
+            "style": {
+              "id": 32,
+              "name": "Rock",
+              "genres": [
+                {
+                  "id": 467,
+                  "name": "Hard rock",
+                  "styleId": 32
+                },
+                {
+                  "id": 453,
+                  "name": "Indie rock",
+                  "styleId": 32
+                },
+                {
+                  "id": 474,
+                  "name": "Psychedelic rock",
+                  "styleId": 32
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 6,
+          "genreId": 453,
+          "genre": {
+            "id": 453,
+            "name": "Indie rock",
+            "styleId": 32,
+            "style": {
+              "id": 32,
+              "name": "Rock",
+              "genres": [
+                {
+                  "id": 467,
+                  "name": "Hard rock",
+                  "styleId": 32
+                },
+                {
+                  "id": 449,
+                  "name": "Alternative rock",
+                  "styleId": 32
+                },
+                {
+                  "id": 474,
+                  "name": "Psychedelic rock",
+                  "styleId": 32
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 6,
+          "genreId": 474,
+          "genre": {
+            "id": 474,
+            "name": "Psychedelic rock",
+            "styleId": 32,
+            "style": {
+              "id": 32,
+              "name": "Rock",
+              "genres": [
+                {
+                  "id": 467,
+                  "name": "Hard rock",
+                  "styleId": 32
+                },
+                {
+                  "id": 449,
+                  "name": "Alternative rock",
+                  "styleId": 32
+                },
+                {
+                  "id": 453,
+                  "name": "Indie rock",
+                  "styleId": 32
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 6,
+    "stars": [
+
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 9,
+        "upvote": 0,
+        "date": 1555612013,
+        "user": {
+          "id": 2,
+          "username": "Mircea Teodor Oprea",
+          "email": "mirceateodor.oprea@gmail.com"
+        },
+        "userId": 2,
+        "feedPostId": 5
+      }
+    ],
+    "comments": [
+
+    ]
+  },
+  {
+    "id": 6,
+    "date": 1555199813,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 7,
+      "title": "Leon Bridges - River",
+      "imageUrl": "https://i.ytimg.com/vi/CWrodPMhpdw/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=CWrodPMhpdw",
+      "postGenres": [
+        {
+          "postId": 7,
+          "genreId": 434,
+          "genre": {
+            "id": 434,
+            "name": "R&B music",
+            "styleId": 30,
+            "style": {
+              "id": 30,
+              "name": "R&B",
+              "genres": [
+
+              ]
+            }
+          }
+        },
+        {
+          "postId": 7,
+          "genreId": 439,
+          "genre": {
+            "id": 439,
+            "name": "Soul music",
+            "styleId": 31,
+            "style": {
+              "id": 31,
+              "name": "Soul",
+              "genres": [
+                {
+                  "id": 443,
+                  "name": "Neo soul",
+                  "styleId": 31
+                },
+                {
+                  "id": 445,
+                  "name": "Soul blues",
+                  "styleId": 31
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 7,
+          "genreId": 443,
+          "genre": {
+            "id": 443,
+            "name": "Neo soul",
+            "styleId": 31,
+            "style": {
+              "id": 31,
+              "name": "Soul",
+              "genres": [
+                {
+                  "id": 439,
+                  "name": "Soul music",
+                  "styleId": 31
+                },
+                {
+                  "id": 445,
+                  "name": "Soul blues",
+                  "styleId": 31
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 7,
+    "stars": [
+      {
+        "id": 1,
+        "date": 1555096253,
+        "feedPostId": 6,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1
+      }
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 1,
+        "upvote": 1,
+        "date": 1555096253,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1,
+        "feedPostId": 6
+      }
+    ],
+    "comments": [
+
+    ]
+  },
+  {
+    "id": 7,
+    "date": 1555458108,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 9,
+      "title": "Efdemin - There Will Be Singing",
+      "imageUrl": "https://i.ytimg.com/vi/2mEJeARswCg/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=2mEJeARswCg",
+      "postGenres": [
+        {
+          "postId": 9,
+          "genreId": 232,
+          "genre": {
+            "id": 232,
+            "name": "Electronic music",
+            "styleId": 17,
+            "style": {
+              "id": 17,
+              "name": "Electronica",
+              "genres": [
+
+              ]
+            }
+          }
+        },
+        {
+          "postId": 9,
+          "genreId": 266,
+          "genre": {
+            "id": 266,
+            "name": "Dance music",
+            "styleId": 20,
+            "style": {
+              "id": 20,
+              "name": "Dance",
+              "genres": [
+
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 9,
+    "stars": [
+
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 7,
+        "upvote": 0,
+        "date": 1555514813,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1,
+        "feedPostId": 7
+      }
+    ],
+    "comments": [
+
+    ]
+  },
+  {
+    "id": 8,
+    "date": 1555803708,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 11,
+      "title": "Gary B.B. Coleman - The Sky is Crying",
+      "imageUrl": "https://i.ytimg.com/vi/71Gt46aX9Z4/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=71Gt46aX9Z4",
+      "postGenres": [
+        {
+          "postId": 11,
+          "genreId": 77,
+          "genre": {
+            "id": 77,
+            "name": "Blues Music",
+            "styleId": 5,
+            "style": {
+              "id": 5,
+              "name": "Blues",
+              "genres": [
+                {
+                  "id": 79,
+                  "name": "Blues Rock",
+                  "styleId": 5
+                },
+                {
+                  "id": 101,
+                  "name": "Soul blues",
+                  "styleId": 5
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 11,
+          "genreId": 101,
+          "genre": {
+            "id": 101,
+            "name": "Soul blues",
+            "styleId": 5,
+            "style": {
+              "id": 5,
+              "name": "Blues",
+              "genres": [
+                {
+                  "id": 79,
+                  "name": "Blues Rock",
+                  "styleId": 5
+                },
+                {
+                  "id": 77,
+                  "name": "Blues Music",
+                  "styleId": 5
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 11,
+          "genreId": 439,
+          "genre": {
+            "id": 439,
+            "name": "Soul music",
+            "styleId": 31,
+            "style": {
+              "id": 31,
+              "name": "Soul",
+              "genres": [
+                {
+                  "id": 443,
+                  "name": "Neo soul",
+                  "styleId": 31
+                },
+                {
+                  "id": 445,
+                  "name": "Soul blues",
+                  "styleId": 31
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 11,
+          "genreId": 445,
+          "genre": {
+            "id": 445,
+            "name": "Soul blues",
+            "styleId": 31,
+            "style": {
+              "id": 31,
+              "name": "Soul",
+              "genres": [
+                {
+                  "id": 439,
+                  "name": "Soul music",
+                  "styleId": 31
+                },
+                {
+                  "id": 443,
+                  "name": "Neo soul",
+                  "styleId": 31
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 11,
+    "stars": [
+      {
+        "id": 2,
+        "date": 1554478013,
+        "feedPostId": 8,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1
+      }
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 2,
+        "upvote": 1,
+        "date": 1555096253,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1,
+        "feedPostId": 8
+      }
+    ],
+    "comments": [
+
+    ]
+  }
+]

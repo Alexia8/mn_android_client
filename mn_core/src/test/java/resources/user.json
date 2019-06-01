@@ -1,0 +1,43 @@
+{
+  "id": 2,
+  "username": "Mircea Teodor Oprea",
+  "email": "mirceateodor.oprea@gmail.com",
+  "likedStyles": [
+    {
+      "userId": 2,
+      "styleId": 19,
+      "style": {
+        "id": 19,
+        "name": "House",
+        "users": []
+      }
+    },
+    {
+      "userId": 2,
+      "styleId": 20,
+      "style": {
+        "id": 20,
+        "name": "Dance",
+        "users": []
+      }
+    },
+    {
+      "userId": 2,
+      "styleId": 22,
+      "style": {
+        "id": 22,
+        "name": "Techno",
+        "users": []
+      }
+    },
+    {
+      "userId": 2,
+      "styleId": 29,
+      "style": {
+        "id": 29,
+        "name": "Pop",
+        "users": []
+      }
+    }
+  ]
+}

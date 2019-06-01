@@ -1,0 +1,23 @@
+{
+  "posts": 8,
+  "stars": 3,
+  "followings": [
+    {
+      "id": 2,
+      "username": "Mircea Teodor Oprea",
+      "email": "mirceateodor.oprea@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "Mircea Teodor Oprea",
+      "email": "mirceateodor.oprea@gmail.com"
+    }
+  ],
+  "followers": [
+    {
+      "id": 2,
+      "username": "Mircea Teodor Oprea",
+      "email": "mirceateodor.oprea@gmail.com"
+    }
+  ]
+}

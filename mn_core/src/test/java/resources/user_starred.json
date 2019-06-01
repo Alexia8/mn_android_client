@@ -1,0 +1,357 @@
+[
+  {
+    "id": 1,
+    "date": 1554913913,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 1,
+      "title": "BANKS - Gemini Feed",
+      "imageUrl": "https://i.ytimg.com/vi/2IeyrEUkBSk/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=2IeyrEUkBSk",
+      "postGenres": [
+        {
+          "postId": 1,
+          "genreId": 232,
+          "genre": {
+            "id": 232,
+            "name": "Electronic music",
+            "styleId": 17,
+            "style": {
+              "id": 17,
+              "name": "Electronica",
+              "genres": [
+
+              ]
+            }
+          }
+        },
+        {
+          "postId": 1,
+          "genreId": 434,
+          "genre": {
+            "id": 434,
+            "name": "R&B music",
+            "styleId": 30,
+            "style": {
+              "id": 30,
+              "name": "R&B",
+              "genres": [
+
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 1,
+    "stars": [
+      {
+        "id": 3,
+        "date": 1554985913,
+        "feedPostId": 1,
+        "user": {
+          "id": 2,
+          "username": "Mircea Teodor Oprea",
+          "email": "mirceateodor.oprea@gmail.com"
+        },
+        "userId": 2
+      },
+      {
+        "id": 4,
+        "date": 1555199813,
+        "feedPostId": 1,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1
+      }
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 3,
+        "upvote": 1,
+        "date": 1554985913,
+        "user": {
+          "id": 2,
+          "username": "Mircea Teodor Oprea",
+          "email": "mirceateodor.oprea@gmail.com"
+        },
+        "userId": 2,
+        "feedPostId": 1
+      }
+    ],
+    "comments": [
+
+    ]
+  },
+  {
+    "id": 6,
+    "date": 1555199813,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 7,
+      "title": "Leon Bridges - River",
+      "imageUrl": "https://i.ytimg.com/vi/CWrodPMhpdw/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=CWrodPMhpdw",
+      "postGenres": [
+        {
+          "postId": 7,
+          "genreId": 434,
+          "genre": {
+            "id": 434,
+            "name": "R&B music",
+            "styleId": 30,
+            "style": {
+              "id": 30,
+              "name": "R&B",
+              "genres": [
+
+              ]
+            }
+          }
+        },
+        {
+          "postId": 7,
+          "genreId": 439,
+          "genre": {
+            "id": 439,
+            "name": "Soul music",
+            "styleId": 31,
+            "style": {
+              "id": 31,
+              "name": "Soul",
+              "genres": [
+                {
+                  "id": 443,
+                  "name": "Neo soul",
+                  "styleId": 31
+                },
+                {
+                  "id": 445,
+                  "name": "Soul blues",
+                  "styleId": 31
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 7,
+          "genreId": 443,
+          "genre": {
+            "id": 443,
+            "name": "Neo soul",
+            "styleId": 31,
+            "style": {
+              "id": 31,
+              "name": "Soul",
+              "genres": [
+                {
+                  "id": 439,
+                  "name": "Soul music",
+                  "styleId": 31
+                },
+                {
+                  "id": 445,
+                  "name": "Soul blues",
+                  "styleId": 31
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 7,
+    "stars": [
+      {
+        "id": 1,
+        "date": 1555096253,
+        "feedPostId": 6,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1
+      }
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 1,
+        "upvote": 1,
+        "date": 1555096253,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1,
+        "feedPostId": 6
+      }
+    ],
+    "comments": [
+
+    ]
+  },
+  {
+    "id": 8,
+    "date": 1555803708,
+    "user": {
+      "id": 1,
+      "username": "Alexia C Dura",
+      "email": "alexiacdura@gmail.com"
+    },
+    "userId": 1,
+    "post": {
+      "id": 11,
+      "title": "Gary B.B. Coleman - The Sky is Crying",
+      "imageUrl": "https://i.ytimg.com/vi/71Gt46aX9Z4/default.jpg",
+      "postUrl": "https://www.youtube.com/watch?v=71Gt46aX9Z4",
+      "postGenres": [
+        {
+          "postId": 11,
+          "genreId": 77,
+          "genre": {
+            "id": 77,
+            "name": "Blues Music",
+            "styleId": 5,
+            "style": {
+              "id": 5,
+              "name": "Blues",
+              "genres": [
+                {
+                  "id": 101,
+                  "name": "Soul blues",
+                  "styleId": 5
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 11,
+          "genreId": 101,
+          "genre": {
+            "id": 101,
+            "name": "Soul blues",
+            "styleId": 5,
+            "style": {
+              "id": 5,
+              "name": "Blues",
+              "genres": [
+                {
+                  "id": 77,
+                  "name": "Blues Music",
+                  "styleId": 5
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 11,
+          "genreId": 439,
+          "genre": {
+            "id": 439,
+            "name": "Soul music",
+            "styleId": 31,
+            "style": {
+              "id": 31,
+              "name": "Soul",
+              "genres": [
+                {
+                  "id": 443,
+                  "name": "Neo soul",
+                  "styleId": 31
+                },
+                {
+                  "id": 445,
+                  "name": "Soul blues",
+                  "styleId": 31
+                }
+              ]
+            }
+          }
+        },
+        {
+          "postId": 11,
+          "genreId": 445,
+          "genre": {
+            "id": 445,
+            "name": "Soul blues",
+            "styleId": 31,
+            "style": {
+              "id": 31,
+              "name": "Soul",
+              "genres": [
+                {
+                  "id": 439,
+                  "name": "Soul music",
+                  "styleId": 31
+                },
+                {
+                  "id": 443,
+                  "name": "Neo soul",
+                  "styleId": 31
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "postId": 11,
+    "stars": [
+      {
+        "id": 2,
+        "date": 1554478013,
+        "feedPostId": 8,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1
+      }
+    ],
+    "reports": [
+
+    ],
+    "votes": [
+      {
+        "id": 2,
+        "upvote": 1,
+        "date": 1555096253,
+        "user": {
+          "id": 1,
+          "username": "Alexia C Dura",
+          "email": "alexiacdura@gmail.com"
+        },
+        "userId": 1,
+        "feedPostId": 8
+      }
+    ],
+    "comments": [
+
+    ]
+  }
+]
