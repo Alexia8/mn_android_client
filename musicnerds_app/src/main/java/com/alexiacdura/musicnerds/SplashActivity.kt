@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
-import com.alexiacdura.mn_ui.AppConstants
+import com.alexiacdura.mn_ui.Utils.resources.AppConstants
 import com.alexiacdura.mn_ui.MusicnerdsActivity
 import java.util.Timer
 import kotlin.concurrent.schedule

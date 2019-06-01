@@ -27,11 +27,22 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    lintOptions {
+        warningsAsErrors true
+        abortOnError false // Disabling or it will be painful: true
+        checkReleaseBuilds true
+        htmlReport true
+    }
 }
 
 dependencies {
     implementation project(':mn_core')
     implementation project(':mn_ui')
+
+    //Rx
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava2Version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid2Version"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
@@ -41,5 +52,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
+    implementation "org.koin:koin-android:${koinVersion}"
 }
