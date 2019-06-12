@@ -17,7 +17,7 @@
         <compilerSettings />
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/build/classes/kotlin/main" />
-          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.koin/koin-android-scope/2.0.0/8712e10367ff7bf736a03c95ab8cd22cea6096ee/koin-android-scope-2.0.0.aar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.koin/koin-android/2.0.0/323eb7718c87a8b4e585b6005b84bffc0e9619a2/koin-android-2.0.0.aar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.koin/koin-core/2.0.0/e315fc75d2e9fc00e73f5a403e560050f05def9a/koin-core-2.0.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/11289d20fd95ae219333f3456072be9f081c30cc/kotlin-stdlib-1.3.31.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.threeten/threetenbp/1.4.0/bb3f7514addb0234922fb93b07c970f0f4d753fa/threetenbp-1.4.0-no-tzdb.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava2/2.5.0/928e129ee8a07ab97270523c48eec85ca16b4e3a/adapter-rxjava2-2.5.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-moshi/2.5.0/95fe2632a019f26d9c53129db192ebc7f3524d35/converter-moshi-2.5.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.5.0/1c96fc5d0230f57d36cd09e2541d10829a3352a7/converter-gson-2.5.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.5.0/713ce36037bf24a76a3974c05cb85c3f754b1cc3/retrofit-2.5.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.13.1/6d517c36aab099730f1a6901512050911e396202/logging-interceptor-3.13.1.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.13.1/b49cf3799bd473199e96c4fb9987e9e08395a1c0/okhttp-3.13.1.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxandroid/2.0.2/84c9e88c62d14beb60c69bf8f6380f988b69561f/rxandroid-2.0.2.aar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.2.8/4b71d5338a5cdc825c67c5c81e1e605df0f1fc9d/rxjava-2.2.8.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.31/20c34a04ea25cb1ef0139598bd67c764562cb170/kotlin-stdlib-common-1.3.31.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi/1.5.0/c3c147f3967bb3b4bc4bae928a065aa9fcc51a31/moshi-1.5.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.2/3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf/gson-2.8.2.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.17.2/78c7820b205002da4d2d137f6f312bd64b3d6049/okio-1.17.2.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.2/323964c36556eb0e6209f65c1cef72b53b461ab8/reactive-streams-1.0.2.jar" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.koin/koin-java/2.0.1/24057a940ca1f9d4dd9c614aa51c911d35e985b1/koin-java-2.0.1.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.koin/koin-android-viewmodel/2.0.1/a14042213b35431fb9f79241a53901ef38274bf2/koin-android-viewmodel-2.0.1.aar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.koin/koin-android-scope/2.0.1/717da2caeb2a1c04641580f389bd407d2f42cf46/koin-android-scope-2.0.1.aar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.koin/koin-android/2.0.1/894828a48f5167b9ed32c71e1f2f727351e7a7c6/koin-android-2.0.1.aar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava2/2.4.0/9286ea8ac29dc3822cca03291259db825e118506/adapter-rxjava2-2.4.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.2.8/4b71d5338a5cdc825c67c5c81e1e605df0f1fc9d/rxjava-2.2.8.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.threeten/threetenbp/1.4.0/bb3f7514addb0234922fb93b07c970f0f4d753fa/threetenbp-1.4.0-no-tzdb.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.koin/koin-core/2.0.1/86ae7f8b8abdbbdb513e472830962361e7a3d646/koin-core-2.0.1.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/11289d20fd95ae219333f3456072be9f081c30cc/kotlin-stdlib-1.3.31.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.4.0/15d7790ee311d961379c51b00aba12d5967cb7ea/converter-gson-2.4.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.4.0/fc4aa382632bfaa7be7b41579efba41d5a71ecf3/retrofit-2.4.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.13.1/6d517c36aab099730f1a6901512050911e396202/logging-interceptor-3.13.1.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.13.1/b49cf3799bd473199e96c4fb9987e9e08395a1c0/okhttp-3.13.1.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.2/323964c36556eb0e6209f65c1cef72b53b461ab8/reactive-streams-1.0.2.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.31/20c34a04ea25cb1ef0139598bd67c764562cb170/kotlin-stdlib-common-1.3.31.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.17.2/78c7820b205002da4d2d137f6f312bd64b3d6049/okio-1.17.2.jar:/Users/alexiacdura/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.2/3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf/gson-2.8.2.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="mn_core" />
@@ -54,26 +54,26 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="Gradle: koin-android-scope-2.0.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: koin-android-2.0.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: koin-core-2.0.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: kotlin-stdlib-1.3.31" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: koin-java-2.0.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: koin-android-viewmodel-2.0.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: koin-android-scope-2.0.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: koin-android-2.0.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: adapter-rxjava2-2.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: rxjava-2.2.8" level="project" />
     <orderEntry type="library" exported="" name="Gradle: threetenbp-1.4.0-no-tzdb" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: adapter-rxjava2-2.5.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: converter-moshi-2.5.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: converter-gson-2.5.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: retrofit-2.5.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: koin-core-2.0.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: kotlin-stdlib-1.3.31" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: converter-gson-2.4.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: retrofit-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: logging-interceptor-3.13.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: okhttp-3.13.1" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: rxandroid-2.0.2" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: rxjava-2.2.8" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: reactive-streams-1.0.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: kotlin-stdlib-common-1.3.31" level="project" />
     <orderEntry type="library" exported="" name="Gradle: annotations-13.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: moshi-1.5.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: gson-2.8.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: okio-1.17.2" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: reactive-streams-1.0.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: gson-2.8.2" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: appcompat-v7-28.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: extensions-1.1.1" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: support-fragment-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: animated-vector-drawable-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: support-core-ui-28.0.0" level="project" />
@@ -95,10 +95,10 @@
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: versionedparcelable-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: collections-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: cursoradapter-28.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: viewmodel-1.1.1" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: documentfile-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: localbroadcastmanager-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: print-28.0.0" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: viewmodel-1.1.1" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: interpolator-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: support-annotations-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: threetenbp-1.4.0" level="project" />
@@ -110,6 +110,7 @@
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: byte-buddy-agent-1.9.10" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: objenesis-2.6" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: appcompat-v7-28.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: extensions-1.1.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: support-fragment-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: animated-vector-drawable-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: support-core-ui-28.0.0" level="project" />
@@ -131,10 +132,10 @@
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: versionedparcelable-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: collections-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: cursoradapter-28.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: viewmodel-1.1.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: documentfile-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: localbroadcastmanager-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: print-28.0.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: viewmodel-1.1.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: interpolator-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: support-annotations-28.0.0" level="project" />
   </component>
