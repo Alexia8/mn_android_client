@@ -3,14 +3,17 @@ package com.alexiacdura.mn_ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.support.v7.app.ActionBar
-import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
-import com.alexiacdura.mn_core.core.koin.KoinScopes
-import com.alexiacdura.mn_ui.Utils.resources.AppConstants
-import com.alexiacdura.mn_ui.Utils.koin.bindNamedScope
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation.findNavController
+import com.alexiacdura.mn_ui.core.utils.resources.AppConstants
+import com.alexiacdura.mn_ui.ui.feed.FeedFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_musicnerds.*
+import org.koin.android.ext.android.inject
 
 
 class MusicnerdsActivity : AppCompatActivity() {
@@ -18,20 +21,20 @@ class MusicnerdsActivity : AppCompatActivity() {
     private lateinit var textMessage: TextView
     private var actionBar: ActionBar? = null
 
+    private val router: MusicnerdsRouter by inject()
+    private lateinit var navController: NavController
+
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_feed -> {
-                textMessage.setText(R.string.title_feed)
                 actionBar!!.title = getString(R.string.title_feed)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_favourites -> {
-                textMessage.setText(R.string.title_favourites)
                 actionBar!!.title = getString(R.string.title_favourites)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_profile -> {
-                textMessage.setText(R.string.title_profile)
                 actionBar!!.title = getString(R.string.title_profile)
                 return@OnNavigationItemSelectedListener true
             }
@@ -46,8 +49,11 @@ class MusicnerdsActivity : AppCompatActivity() {
         setupToolbar()
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
-        textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+
+        navController = findNavController(this, R.id.navHostFragment)
+        router.navController = navController
+
     }
 
     private fun setupToolbar() {
@@ -57,6 +63,26 @@ class MusicnerdsActivity : AppCompatActivity() {
         actionBar!!.setDisplayShowHomeEnabled(true)
         actionBar!!.setLogo(R.mipmap.ic_mn_logo_icon_toolbar)
         actionBar!!.setDisplayUseLogoEnabled(true)
+    }
+
+    override fun onSupportNavigateUp() = navController.navigateUp()
+
+    override fun onBackPressed() {
+        val currentFragment = getCurrentFragment()
+
+        val backPressedHandled = triggerFragmentBackPressed(currentFragment)
+
+        if (!backPressedHandled) {
+            super.onBackPressed()
+        }
+    }
+
+    private fun getCurrentFragment(): Fragment? {
+        return supportFragmentManager.findFragmentById(R.id.navHostFragment)
+    }
+
+    private fun triggerFragmentBackPressed(fragment: Fragment?): Boolean {
+        return fragment is FeedFragment
     }
 
     companion object {
