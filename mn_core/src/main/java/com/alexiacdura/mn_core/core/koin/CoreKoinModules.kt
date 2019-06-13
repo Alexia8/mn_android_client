@@ -44,13 +44,13 @@ val coreKoinModules = module {
         ) as ServiceFactory<VoteApiService>
     }
 
-    single(KoinNames.USER_API) { UserApiImpl(serviceFactory = get(KoinNames.USER_API_SERVICE)) as UserApi }
+    single { UserApiImpl(serviceFactory = get(KoinNames.USER_API_SERVICE)) as UserApi }
     single { StarApiImpl(serviceFactory = get(KoinNames.STAR_API_SERVICE)) as StarApi }
     single { VoteApiImpl(serviceFactory = get(KoinNames.VOTE_API_SERVICE)) as VoteApi }
 
-    single { UserInteractorImpl(userApi = get(KoinNames.USER_API)) as UserInteractor }
-    single (KoinNames.USER_FEED) { UserFeedInteractorImpl(userApi = get(KoinNames.USER_API)) as UserFeedInteractor }
-    single (KoinNames.USER_DATA) { UserDataInteractorImpl(userApi = get(KoinNames.USER_API)) as UserDataInteractor }
+    single { UserInteractorImpl(userApi = get()) as UserInteractor }
+    single { UserFeedInteractorImpl(userApi = get()) as UserFeedInteractor }
+    single { UserDataInteractorImpl(userApi = get()) as UserDataInteractor }
 
     single { CreateStarInteractorImpl(starApi = get()) as CreateStarInteractor }
     single { DeleteStarInteractorImpl(starApi = get()) as DeleteStarInteractor }
@@ -58,10 +58,10 @@ val coreKoinModules = module {
     single { CreateVoteInteractorImpl(voteApi = get()) as CreateVoteInteractor }
     single { DeleteVoteInteractorImpl(voteApi = get()) as DeleteVoteInteractor }
 
-    single(KoinNames.FEED) {
+    single {
         FeedInteractorImpl(
-            userFeedInteractor = get(KoinNames.USER_FEED),
-            userDataInteractor = get(KoinNames.USER_DATA)
+            userFeedInteractor = get(),
+            userDataInteractor = get()
         ) as FeedInteractor
     }
 }

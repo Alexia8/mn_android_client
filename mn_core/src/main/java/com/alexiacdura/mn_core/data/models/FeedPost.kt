@@ -20,7 +20,7 @@ interface FeedPost {
         val id: Int
         val title: String
         val postImage: URL
-        val postUrl: URL
+        val postUrl: String
         val postGenres: List<PostGenre>
 
         interface PostGenre {

@@ -11,7 +11,7 @@ import retrofit2.http.Query
 
 internal interface UserApiService {
     companion object {
-        const val API_PATH = "/api/Users"
+        const val API_PATH = "api/Users"
     }
 
     /** Retrieve user with liked styles*/
@@ -21,7 +21,7 @@ internal interface UserApiService {
     ): Single<UserEntity>
 
     /** Retrieve user with feed posts sorted from backend*/
-    @GET("$API_PATH/{user}/userFeed/{limFrom}/{limTo}")
+    @GET("$API_PATH/{user}/userFeed")
     fun getUserFeed(
         @Path("user") user: Int,
         @Query("limFrom") limFrom: Int,
@@ -29,7 +29,7 @@ internal interface UserApiService {
     ): Single<List<FeedPostEntity>>
 
     /** Retrieve user with starred posts sorted from backend*/
-    @GET("$API_PATH/{user}/userRecentStarredPosts/{limFrom}/{limTo}")
+    @GET("$API_PATH/{user}/userRecentStarredPosts")
     fun getUserStarredPosts(
         @Path("user") user: Int,
         @Query("limFrom") limFrom: Int,
@@ -37,7 +37,7 @@ internal interface UserApiService {
     ): Single<List<FeedPostEntity>>
 
     /** Retrieve user posts sorted from backend*/
-    @GET("$API_PATH/{user}/userRecentPosts/{limFrom}/{limTo}")
+    @GET("$API_PATH/{user}/userRecentPosts")
     fun getUserRecentPosts(
         @Path("user") user: Int,
         @Query("limFrom") limFrom: Int,
