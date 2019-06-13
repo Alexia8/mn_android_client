@@ -11,8 +11,9 @@ data class HeaderCardViewModel(
     //val userImage = feedPost?.feedPostUser?.imageUrl ?: URL("")
     val username = feedPost?.feedPostUser?.username ?: ""
     val titlePost = feedPost?.feedPostData?.title ?: ""
-    val datePost = feedPost?.feedPostDate.toString()
+    var datePost = feedPost?.feedPostDate.toString()
     val postImage = feedPost?.feedPostData?.postImage
+    val postUrl = feedPost?.feedPostData?.postUrl
 
     fun onUserClick() {
         callbackUserImageClick(feedPost?.feedPostUser)

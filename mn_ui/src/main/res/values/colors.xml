@@ -7,4 +7,16 @@
     <color name="white_100">#FFFFFF</color>
     <color name="white_90">#90FFFFFF</color>
     <color name="white_80">#80FFFFFF</color>
+
+    <color name="mn_blue_dark_90">#900F2F53</color>
+    <color name="mn_blue_dark_80">#800F2F53</color>
+    <color name="mn_blue_dark_70">#700F2F53</color>
+
+    <color name="mn_blue_light_95">#9559A4C8</color>
+    <color name="mn_blue_light_90">#9059A4C8</color>
+    <color name="mn_blue_light_80">#8059A4C8</color>
+    <color name="mn_blue_light_70">#7059A4C8</color>
+    <color name="mn_blue_light_60">#6059A4C8</color>
+
+
 </resources>

@@ -23,21 +23,21 @@
     </style>
 
     <style name="Style.HeaderView.Username" parent="AppTheme">
-        <item name="android:textSize">@dimen/font_base_16</item>
+        <item name="android:textSize">@dimen/font_base_14</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Style.HeaderView.PostTitle" parent="AppTheme">
-        <item name="android:textSize">@dimen/font_base_14</item>
+        <item name="android:textSize">@dimen/font_base_12</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
-        <item name="android:textStyle">italic</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
     <style name="Style.HeaderView.Date" parent="AppTheme">
         <item name="android:textSize">@dimen/font_small_10</item>
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textStyle">italic</item>
     </style>
 
     <style name="Style.PostCardView.Placeholder" parent="AppTheme">

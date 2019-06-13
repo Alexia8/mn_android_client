@@ -5,6 +5,7 @@ import com.alexiacdura.mn_core.data.network.entities.FeedPostEntity
 import com.alexiacdura.mn_core.data.network.entities.UserDataEntity
 import io.reactivex.Single
 import retrofit2.http.GET
+import retrofit2.http.Headers
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -21,6 +22,7 @@ internal interface UserApiService {
     ): Single<UserEntity>
 
     /** Retrieve user with feed posts sorted from backend*/
+    @Headers("Content-Type: application/json; charset=utf-8")
     @GET("$API_PATH/{user}/userFeed")
     fun getUserFeed(
         @Path("user") user: Int,

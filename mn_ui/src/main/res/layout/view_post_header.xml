@@ -21,13 +21,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/userImage"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="@dimen/base_16"
+                android:layout_marginStart="@dimen/small_8"
                 android:layout_marginTop="@dimen/small_8"
                 android:onClick="@{() -> headerViewModel.onUserClick()}"
                 android:scaleType="centerCrop"
@@ -43,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{() -> headerViewModel.onUserNameClick()}"
                 android:paddingStart="@dimen/small_8"
+                android:paddingTop="@dimen/xsmall_4"
                 android:paddingEnd="@dimen/base_16"
                 android:text="@{headerViewModel.username}"
                 app:layout_constraintStart_toEndOf="@id/userImage"
@@ -58,8 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
-                android:ems="19"
-                android:maxLines="2"
+                android:ems="17"
                 android:paddingStart="@dimen/small_8"
                 android:paddingEnd="@dimen/base_16"
                 android:singleLine="true"
@@ -89,15 +89,26 @@
             <ImageView
                 android:id="@+id/bodyPostImage"
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
-                android:layout_marginTop="@dimen/small_8"
+                android:layout_height="150dp"
+                android:layout_marginTop="12dp"
                 android:contentDescription="@null"
                 android:onClick="@{() -> headerViewModel.onPostClick()}"
                 android:scaleType="fitXY"
+                android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@id/userImage"
                 app:layout_constraintTop_toBottomOf="@id/postTitle"
                 tools:background="@mipmap/sample_post_image"
                 tools:showIn="@layout/view_post_body_card" />
+
+            <WebView
+                android:id="@+id/youtubeWebView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toEndOf="@id/userImage"
+                app:layout_constraintTop_toBottomOf="@id/postTitle"
+                tools:background="@mipmap/sample_post_image" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
