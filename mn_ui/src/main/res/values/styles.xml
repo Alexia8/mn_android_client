@@ -4,7 +4,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">serif-monospace</item>
-        <item name="fontFamily">serif-monospace</item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
+        <item name="fontFamily">serif-monospace
+        </item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -15,5 +16,32 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="Style.FeedFragment.Background" parent="AppTheme">
+        <item name="android:background">@color/white_100</item>
+    </style>
+
+    <style name="Style.HeaderView.Username" parent="AppTheme">
+        <item name="android:textSize">@dimen/font_base_16</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Style.HeaderView.PostTitle" parent="AppTheme">
+        <item name="android:textSize">@dimen/font_base_14</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="Style.HeaderView.Date" parent="AppTheme">
+        <item name="android:textSize">@dimen/font_small_10</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Style.PostCardView.Placeholder" parent="AppTheme">
+        <item name="android:background">@mipmap/sample_post_image</item>
+    </style>
 
 </resources>

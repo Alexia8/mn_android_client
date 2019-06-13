@@ -1,5 +1,5 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- DP sizes. -->
     <dimen name="xlarge_32">32dp</dimen>
     <dimen name="large_24">24dp</dimen>
     <dimen name="big_20">20dp</dimen>
@@ -7,4 +7,12 @@
     <dimen name="small_8">8dp</dimen>
     <dimen name="xsmall_4">4dp</dimen>
     <dimen name="xxsmall_2">2dp</dimen>
+
+    <!-- SP sizes. -->
+    <dimen name="font_large_24">24sp</dimen>
+    <dimen name="font_big_20">20sp</dimen>
+    <dimen name="font_base_16">16sp</dimen>
+    <dimen name="font_base_14">14sp</dimen>
+    <dimen name="font_base_12">12sp</dimen>
+    <dimen name="font_small_10">10sp</dimen>
 </resources>

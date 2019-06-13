@@ -3,12 +3,12 @@ package com.alexiacdura.musicnerds
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
-import com.alexiacdura.mn_ui.Utils.resources.AppConstants
+import androidx.appcompat.app.AppCompatActivity
 import com.alexiacdura.mn_ui.MusicnerdsActivity
-import java.util.Timer
+import com.alexiacdura.mn_ui.core.utils.resources.AppConstants
+import java.util.*
 import kotlin.concurrent.schedule
 
 
