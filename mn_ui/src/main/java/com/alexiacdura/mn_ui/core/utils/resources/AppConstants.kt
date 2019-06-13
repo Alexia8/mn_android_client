@@ -1,4 +1,4 @@
-package com.alexiacdura.mn_ui.Utils.resources
+package com.alexiacdura.mn_ui.core.utils.resources
 
 class AppConstants {
     companion object {
