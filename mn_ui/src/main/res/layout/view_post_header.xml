@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="headerViewModel"
+            type="com.alexiacdura.mn_ui.ui.components.post.header.HeaderCardViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/small_8"
+        app:cardElevation="@dimen/small_8"
+        app:cardUseCompatPadding="true"
+        tools:showIn="@layout/layout_feedposts_view_item">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/base_16"
+                android:layout_marginTop="@dimen/small_8"
+                android:onClick="@{() -> headerViewModel.onUserClick()}"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_default_user_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/username"
+                style="@style/Style.HeaderView.Username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> headerViewModel.onUserNameClick()}"
+                android:paddingStart="@dimen/small_8"
+                android:paddingEnd="@dimen/base_16"
+                android:text="@{headerViewModel.username}"
+                app:layout_constraintStart_toEndOf="@id/userImage"
+                app:layout_constraintTop_toTopOf="@id/userImage"
+                tools:text="Alexia C Dura"
+                tools:textColor="@color/colorPrimaryDark"
+                tools:textSize="@dimen/font_base_16"
+                tools:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/postTitle"
+                style="@style/Style.HeaderView.PostTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:ems="19"
+                android:maxLines="2"
+                android:paddingStart="@dimen/small_8"
+                android:paddingEnd="@dimen/base_16"
+                android:singleLine="true"
+                android:text="@{headerViewModel.titlePost}"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@id/userImage"
+                app:layout_constraintTop_toBottomOf="@id/username"
+                tools:text="Gemini Feed - BANKS"
+                tools:textColor="@color/colorPrimaryDark"
+                tools:textSize="@dimen/font_base_14" />
+
+            <TextView
+                android:id="@+id/postDate"
+                style="@style/Style.HeaderView.Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/base_16"
+                android:paddingEnd="@dimen/base_16"
+                android:text="@{headerViewModel.datePost}"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/userImage"
+                tools:text="4 min ago"
+                tools:textColor="@color/colorPrimaryDark"
+                tools:textSize="@dimen/font_small_10" />
+
+            <ImageView
+                android:id="@+id/bodyPostImage"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="@dimen/small_8"
+                android:contentDescription="@null"
+                android:onClick="@{() -> headerViewModel.onPostClick()}"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toEndOf="@id/userImage"
+                app:layout_constraintTop_toBottomOf="@id/postTitle"
+                tools:background="@mipmap/sample_post_image"
+                tools:showIn="@layout/view_post_body_card" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
