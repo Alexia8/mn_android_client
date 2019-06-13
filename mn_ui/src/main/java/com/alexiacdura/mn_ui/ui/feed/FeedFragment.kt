@@ -32,6 +32,12 @@ internal class FeedFragment : Fragment() {
         return binding.root
     }
 
+    override fun onStart() {
+        super.onStart()
+        // viewModel.postEvent(FeedUiEvent.Feed)
+        viewModel.feedStart()
+    }
+
     private fun onLoadMore() {
         viewModel.loadMore()
     }
@@ -45,4 +51,5 @@ internal class FeedFragment : Fragment() {
     private fun getUser(): Int {
         return arguments?.getInt("userId") ?: 1
     }
+
 }

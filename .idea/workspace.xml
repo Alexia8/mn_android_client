@@ -8,7 +8,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Header" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="FeedVie" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
@@ -25,7 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fc09908-edf8-4574-9401-d03109be042a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mn_ui/src/main/res/drawable/ic_share_link.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedUiEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedUiState.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -38,14 +39,24 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/user/UserApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/user/UserApiService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractorImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractorImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/mn_ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/mn_ui.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/ItemDividerDecoration.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/error/ErrorView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/error/ErrorView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsItemViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsItemViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModelImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModelImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/loading/LoadingLayoutView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/loading/LoadingLayoutView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/res/drawable/ic_share_link_icon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/res/drawable/ic_share_link_icon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/res/layout/activity_musicnerds.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/res/layout/activity_musicnerds.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/res/layout/fragment_feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/res/layout/fragment_feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_body_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_body_card.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_header.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_header.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mn_ui/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mn_ui/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,44 +102,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModelImpl.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="65" column="60" selection-start-line="65" selection-start-column="60" selection-end-line="65" selection-end-column="60" />
+              <folding>
+                <element signature="e#54#683#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsItemViewModel.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsView.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-227">
+              <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+              <folding>
+                <element signature="e#54#688#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/activity_musicnerds.xml">
+        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_body_card.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+            <state relative-caret-position="330">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/drawable/ic_share_link.xml">
+        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/drawable/ic_share_link_icon.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/color/nav_color.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="465">
+              <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+              <folding>
+                <element signature="e#57#597#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,44 +161,33 @@
         <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_header.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+            <state relative-caret-position="533">
+              <caret line="98" column="60" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
+              <folding>
+                <element signature="e#1908#1925#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/models/FeedPost.kt">
+        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/layout_feedposts_view_item.xml">
+          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+            <state relative-caret-position="360">
+              <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/user/UserApiService.kt">
+        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/entities/FeedPostEntity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardView.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="57" column="63" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
+            <state relative-caret-position="120">
+              <caret line="8" column="112" selection-start-line="8" selection-start-column="112" selection-end-line="8" selection-end-column="112" />
+              <folding>
+                <element signature="e#57#141#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,8 +202,8 @@
         <option value="layoutResourceFile" />
         <option value="layoutResourceFile_vertical" />
         <option value="navigationResourceFile" />
-        <option value="Kotlin File" />
         <option value="resourceFile" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -202,9 +215,9 @@
       <find>Resource</find>
       <find>2130903262</find>
       <find>Feedvi</find>
-      <find>FeedViewModel</find>
       <find>Feed</find>
       <find>HeaderView</find>
+      <find>FeedViewModel</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -213,17 +226,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mn_ui/src/main/res/navigation/nav_graph.xml" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/error/ErrorView.kt" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_custom_error.xml" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/error/ErrorViewModel.kt" />
-        <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/star/StarApiService.kt" />
-        <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/vote/VoteApiService.kt" />
         <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedState.kt" />
         <option value="$PROJECT_DIR$/musicnerds_app/src/main/res/animator/rotate_animation.xml" />
         <option value="$PROJECT_DIR$/musicnerds_app/src/main/res/animator/flip_animation.xml" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/animator/rotate_animation.xml" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/loading/LoadingLayoutView.kt" />
         <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/koin/KoinNames.kt" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/core/viewmodel/RxAndroidViewModel.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
@@ -234,36 +240,43 @@
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_feedposts.xml" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/core/views/imagecard/ImageCardView.kt" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_image_card.xml" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardView.kt" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardViewModel.kt" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_body_card.xml" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsItemViewModel.kt" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/layout_feedposts_view_item.xml" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/core/views/imagecard/ImageCardViewBindings.kt" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/MusicnerdsActivity.kt" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/koin/CoreKoinModules.kt" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/core/koin/UiKoinModules.kt" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/values/attrs.xml" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_loading.xml" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedFragment.kt" />
-        <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/models/FeedPost.kt" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModelImpl.kt" />
-        <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractorImpl.kt" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedViewModel.kt" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/ItemDividerDecoration.kt" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsView.kt" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/fragment_feed.xml" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardViewModel.kt" />
         <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/entities/FeedPostEntity.kt" />
         <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/user/UserApiService.kt" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_header.xml" />
-        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardView.kt" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/drawable/ic_share_link_icon.xml" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/drawable/ic_share_link.xml" />
+        <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/user/UserFeedInteractor.kt" />
+        <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractorImpl.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedUiEvent.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedUiState.kt" />
+        <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractor.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedFragment.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/fragment_feed.xml" />
         <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/activity_musicnerds.xml" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/MusicnerdsActivity.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/error/ErrorView.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/loading/LoadingLayoutView.kt" />
+        <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/models/FeedPost.kt" />
+        <option value="$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/user/UserMappers.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedViewModel.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsView.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_body_card.xml" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModelImpl.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsItemViewModel.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardView.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardViewModel.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardViewModel.kt" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/layout_feedposts_view_item.xml" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_header.xml" />
+        <option value="$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardView.kt" />
       </list>
     </option>
   </component>
@@ -280,7 +293,147 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_core" type="e9137016:NonAndroidModuleNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_core" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_core" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="mn_core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_core" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="mn_core" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_core" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="mn_core" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_core" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="mn_core" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="network" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_core" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="mn_core" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="network" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_core" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="mn_core" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mn_ui" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mn_ui" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mn_ui" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mn_ui" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="feedpost" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mn_ui" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mn_ui" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+              <item name="body" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="mn_ui" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+              <item name="header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="mn_android_client" type="1abcf292:AndroidViewProjectNode" />
+              <item name="mn_ui" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
@@ -633,10 +786,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24114774" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24114774" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -647,7 +799,7 @@
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.32941177" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63614166" weight="0.6727273" />
-      <window_info anchor="bottom" id="Logcat" order="3" sideWeight="0.4993895" weight="0.03208556" />
+      <window_info anchor="bottom" id="Logcat" order="3" sideWeight="0.4993895" weight="0.5379679" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.36898395" />
       <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.4993895" weight="0.5893048" />
@@ -676,14 +828,14 @@
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969475" weight="0.5486631" />
-      <window_info anchor="bottom" id="Logcat" order="3" sideWeight="0.4993895" weight="0.5475936" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63614166" weight="0.6727273" />
+      <window_info anchor="bottom" id="Logcat" order="3" sideWeight="0.4993895" weight="0.5390374" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32941177" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.65026736" />
-      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.4993895" weight="0.23850267" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50305253" side_tool="true" weight="0.48770052" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.36898395" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.4993895" weight="0.5893048" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.36385837" side_tool="true" weight="0.5486631" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.96791446" />
-      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.64224666" weight="0.3839572" />
+      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.55982906" weight="0.3839572" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.21283422" />
       <window_info anchor="bottom" id="Android Profiler" order="11" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -695,119 +847,7 @@
       <window_info anchor="right" id="Assistant" order="6" weight="0.32967034" />
     </layout-to-restore>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModelImpl.kt</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModelImpl.kt</url>
-          <line>65</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModelImpl.kt</url>
-          <line>64</line>
-          <properties>
-            <option name="lambda-ordinal" value="0" />
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/adapters/any/AnyAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/core/views/imagecard/ImageCardViewBindings.kt" />
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_body_card.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/adapters/any/AnyItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/factory/OKHttpClientBuilderFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/factory/ServiceFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/factory/DefaultOKHttpClientBuilder.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/factory/DefaultServiceFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/rx/MockSchedulerProvider.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/rx/SchedulersProvider.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/utils/MappingException.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/utils/OKHttpClientUtils.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/build/generated/source/kapt/debug/com/alexiacdura/mn_ui/databinding/ViewPostHeaderBindingImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -815,29 +855,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/loading/LoadingLayoutView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/rx/RxLifeCycle.kt" />
     <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/view_image_card.xml" />
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/core/koin/CoreKoinModules.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -859,71 +878,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/layout_feedposts_view_item.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/view_loading.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="39" column="62" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsItemViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="87" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModelImpl.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractor.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractorImpl.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="152" column="44" selection-start-line="152" selection-start-column="44" selection-end-line="152" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="54" column="78" selection-start-line="54" selection-start-column="78" selection-end-line="54" selection-end-column="78" />
-          <folding>
-            <element signature="e#39#891#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -948,21 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/fragment_feed.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="41" column="86" selection-start-line="41" selection-start-column="86" selection-end-line="41" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/core/utils/resources/AppConstants.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -977,13 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -991,10 +928,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/MusicnerdsActivity.kt">
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/drawable/ic_share_link.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+        <state relative-caret-position="60">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -1015,25 +952,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_header.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/models/FeedPost.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/user/UserApiService.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/user/UserFeedInteractor.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractorImpl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-687">
+          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedUiEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedState.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/user/UserFeedInteractorImpl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/user/states/UserFeedState.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedInteractor.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedUiState.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/feed/FeedEvent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/fragment_feed.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/activity_musicnerds.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#1585#1603#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/MusicnerdsActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding>
+            <element signature="e#1131#1161#0" expanded="true" />
+            <element signature="e#1317#1353#0" expanded="true" />
+            <element signature="e#1506#1539#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/error/ErrorViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/loading/LoadingLayoutViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/error/ErrorView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+          <folding>
+            <element signature="e#51#491#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/loading/LoadingLayoutView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1044,25 +1105,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardView.kt">
+    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/models/FeedPost.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="57" column="63" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/drawable/ic_share_link.xml">
+    <entry file="file://$PROJECT_DIR$/mn_core/src/main/java/com/alexiacdura/mn_core/data/network/user/UserMappers.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        <state relative-caret-position="225">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding>
+            <element signature="e#51#402#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/activity_musicnerds.xml">
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/MusicnerdsRouter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/feed/FeedViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2435">
+          <caret line="178" column="5" lean-forward="true" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
+          <folding>
+            <element signature="e#39#862#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+          <folding>
+            <element signature="e#54#688#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_body_card.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+        <state relative-caret-position="330">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsItemViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/feedpost/FeedPostsViewModelImpl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="65" column="60" selection-start-line="65" selection-start-column="60" selection-end-line="65" selection-end-column="60" />
+          <folding>
+            <element signature="e#54#683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="112" selection-start-line="8" selection-start-column="112" selection-end-line="8" selection-end-column="112" />
+          <folding>
+            <element signature="e#57#141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/layout_feedposts_view_item.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/res/layout/view_post_header.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="98" column="60" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
+          <folding>
+            <element signature="e#1908#1925#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/header/HeaderCardView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="e#57#597#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mn_ui/src/main/java/com/alexiacdura/mn_ui/ui/components/post/body/BodyCardViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
         </state>
       </provider>
     </entry>

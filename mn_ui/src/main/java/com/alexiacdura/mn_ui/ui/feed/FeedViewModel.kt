@@ -1,8 +1,7 @@
 package com.alexiacdura.mn_ui.ui.feed
 
 import android.app.Application
-import android.content.Intent
-import android.net.Uri
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.alexiacdura.mn_core.core.rx.SchedulersProvider
 import com.alexiacdura.mn_core.data.feed.FeedEvent
@@ -25,56 +24,129 @@ internal class FeedViewModel(
     private val schedulersProvider: SchedulersProvider
 ) : RxAndroidViewModel(application) {
 
-    private val eventPublisher = PublishSubject.create<FeedEvent>()
-    private var userId: Int? = null
+    private val feedPublisher = PublishSubject.create<FeedEvent>()
+    //private val uiPublisher = PublishSubject.create<FeedUiEvent>()
+    private var userId: Int = 0
 
     val viewsForFeedLoadingVisible = MutableLiveData<Boolean>()
-    val viewsForFeedVisible = MutableLiveData<Boolean>()
     val viewsForFeedErrorVisible = MutableLiveData<Boolean>()
+    val feedVisible = MutableLiveData<Boolean>()
     val loadingLatestVisible = MutableLiveData<Boolean>()
 
     val errorViewModel = MutableLiveData<ErrorViewModel>().apply { value = ErrorViewModel() }
     val loadingViewModel = MutableLiveData<LoadingLayoutViewModel>().apply { value = LoadingLayoutViewModel() }
 
-    val feedPostsViewModel = FeedPostsViewModelImpl()
+    val feedPostsViewModel = FeedPostsViewModelImpl(::userImageCallback, ::userNameCallback)
+
+    /**
+    fun postEvent(event: FeedUiEvent) {
+    uiPublisher.onNext(event)
+    }
+     */
 
     fun init(userId: Int) {
         this.userId = userId
+
+        //val loadedFilter = createDataLoadingFilterObservable()
+        //val uiLoadedFilter = createUiLoadedFilterObservable()
+
         val subscriber = interactor
-            .createFeedStateObservable(eventPublisher, userId)
+            .createFeedStateObservable(feedPublisher, userId, LIMFROM, LIMTO)
             .observeOn(schedulersProvider.main())
             .subscribe(::handleFeedStates, ::showError)
         registerDisposable(subscriber)
     }
 
+    /** Handling loading webb view before viewModel displays
+
+    fun init(userId: Int) {
+    this.userId = userId
+
+    val loadedFilter = createDataLoadingFilterObservable()
+    val uiLoadedFilter = createUiLoadedFilterObservable()
+
+    val subscriber = Observable
+    .merge(loadedFilter, uiLoadedFilter)
+    .observeOn(schedulersProvider.main())
+    .subscribe({ handleUiState(it) }) { showError(it) }
+    registerDisposable(subscriber)
+    }
+     */
+
     fun feedStart() {
-        eventPublisher.onNext(FeedEvent.Feed)
+        feedPublisher.onNext(FeedEvent.Feed)
+    }
+
+    fun StarredStart() {
+        feedPublisher.onNext(FeedEvent.Starred)
     }
 
     fun loadMore() {
-        eventPublisher.onNext(FeedEvent.LoadMore(feedPostsViewModel.items.size))
+        feedPublisher.onNext(FeedEvent.LoadMore(feedPostsViewModel.items.size))
     }
+
+    /**
+    private fun createDataLoadingFilterObservable(): Observable<FeedUiState> {
+    return uiPublisher
+    .filter { it is FeedUiEvent.Feed }
+    .flatMap { createLoadFeedObservable() }
+    }
+
+    private fun createUiLoadedFilterObservable(): Observable<FeedUiState> {
+    return uiPublisher
+    .filter { it is FeedUiEvent.UiLoaded }
+    .map { FeedUiState.UiLoaded }
+    }
+
+    private fun createLoadFeedObservable(): Observable<FeedUiState> {
+    val loadDataObservable = interactor.createFeedStateObservable(feedPublisher, userId, LIMFROM, LIMTO)
+
+    val loadingFilterObservable = loadDataObservable
+    .filter { it is FeedState.Loading || it is FeedState.Error }
+
+    val successFilterObservable = loadDataObservable
+    .filter { it is FeedState.Feed }
+
+    return Observable.merge(loadingFilterObservable, successFilterObservable)
+    .map { FeedUiState.Updated(it) }
+    }
+
+    private fun handleUiState(uiState: FeedUiState) {
+    when (uiState) {
+    is FeedUiState.Updated -> handleFeedStates(uiState.feedState)
+    FeedUiState.UiLoaded -> updateVisibilityState(loadingVisible = false)
+    }
+    }
+
+     */
 
     private fun handleFeedStates(state: FeedState) {
         when (state) {
             is FeedState.Loading -> updateVisibilityState(loadingVisible = true)
             is FeedState.Error -> showError(state.throwable)
             is FeedState.Feed.SuccessInitial -> handleFeedInitialState(state.userFeedState)
-            is FeedState.LoadingMore-> setLoadingMoreVisible(true)
+            is FeedState.LoadingMore -> updateVisibilityState(
+                loadingVisible = false,
+                feedVisible = true,
+                loadingLatestVisible = true
+            )
             is FeedState.Feed.SuccessMore -> handleMorePostsLoaded(state.userFeedState)
-            is FeedState.Feed.SuccessEnd -> setLoadingMoreVisible(false)
+            is FeedState.Feed.SuccessEnd -> updateVisibilityState(loadingLatestVisible = false)
         }
     }
 
     private fun handleFeedInitialState(userFeedState: UserFeedState) {
         feedPostsViewModel.update(userFeedState)
-        updateVisibilityState(feedVisible = true)
+        updateVisibilityState(loadingVisible = false, feedVisible = true)
     }
 
     private fun handleMorePostsLoaded(userFeedState: UserFeedState) {
-        viewsForFeedLoadingVisible.value = false
-        viewsForFeedErrorVisible.value = false
-        setLoadingMoreVisible(false)
+        updateVisibilityState(
+            loadingVisible = false,
+            errorVisible = false,
+            feedVisible = true,
+            loadingLatestVisible = false
+        )
         feedPostsViewModel.update(userFeedState)
     }
 
@@ -97,27 +169,34 @@ internal class FeedViewModel(
     private fun updateVisibilityState(
         loadingVisible: Boolean = false,
         errorVisible: Boolean = false,
-        feedVisible: Boolean = false
+        feedVisible: Boolean = false,
+        loadingLatestVisible: Boolean = false
     ) {
         this.viewsForFeedLoadingVisible.value = loadingVisible
         this.viewsForFeedErrorVisible.value = errorVisible
-        this.viewsForFeedVisible.value = feedVisible
+        this.feedVisible.value = feedVisible
+        this.loadingLatestVisible.value = loadingLatestVisible
     }
 
-    private fun setLoadingMoreVisible(visible: Boolean) {
-        loadingLatestVisible.value = visible
+    private fun userImageCallback(user: FeedPost.UserPost) {
+        //router.openProfileFragment(user.id)
+        Log.d("FeedViewModel", "UserImageCallback")
     }
 
-    private fun userImageCallback(user: FeedPost) {
-        router.openProfileFragment(user.feedPostUser.id)
+    private fun userNameCallback(user: FeedPost.UserPost) {
+        //router.openProfileFragment(user.id)
+        Log.d("FeedViewModel", "UserNameCallback")
     }
 
-    private fun userNameCallback(user: FeedPost) {
-        router.openProfileFragment(user.feedPostUser.id)
+    private fun postImageCallback(post: FeedPost.Post) {
+        //val intent = Intent(Intent.ACTION_VIEW, Uri.parse(post.postUrl))
+        Log.d("FeedViewModel", "UserPostCallback")
     }
 
-    private fun postImageCallback(post: FeedPost) {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(post.feedPostData.postUrl))
+    companion object {
+        private const val LIMFROM = 0
+        private const val LIMTO = 5
+        private const val DISPLAY_DATA_DELAY_MS = 500L
     }
 }
 

@@ -8,6 +8,7 @@ import com.alexiacdura.mn_ui.core.binding.BindableView
 import com.alexiacdura.mn_ui.core.binding.viewBinding
 import com.alexiacdura.mn_ui.core.binding.viewModel
 import com.alexiacdura.mn_ui.databinding.ViewCustomErrorBinding
+import com.alexiacdura.mn_ui.ui.components.error.ErrorViewModel
 
 
 class ErrorView @JvmOverloads constructor(

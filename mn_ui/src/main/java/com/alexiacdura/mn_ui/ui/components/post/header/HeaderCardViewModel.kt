@@ -1,12 +1,12 @@
 package com.alexiacdura.mn_ui.ui.components.post.header
 
 import com.alexiacdura.mn_core.data.models.FeedPost
+import kotlin.reflect.KFunction1
 
 data class HeaderCardViewModel(
     val feedPost: FeedPost?,
-    private val callbackUserImageClick: (FeedPost.UserPost?) -> Unit = {},
-    private val callbackUserNameClick: (FeedPost.UserPost?) -> Unit = {},
-    private val callbackPostClick: (FeedPost.Post?) -> Unit = {}
+    private val callbackUserImageClick: KFunction1<@ParameterName(name = "user") FeedPost.UserPost, Unit>? = null,
+    private val callbackUserNameClick: KFunction1<@ParameterName(name = "user") FeedPost.UserPost, Unit>? = null
 ) {
     //val userImage = feedPost?.feedPostUser?.imageUrl ?: URL("")
     val username = feedPost?.feedPostUser?.username ?: ""
@@ -16,14 +16,10 @@ data class HeaderCardViewModel(
     val postUrl = feedPost?.feedPostData?.postUrl
 
     fun onUserClick() {
-        callbackUserImageClick(feedPost?.feedPostUser)
+        callbackUserImageClick?.invoke(feedPost!!.feedPostUser)
     }
 
     fun onUserNameClick() {
-        callbackUserNameClick(feedPost?.feedPostUser)
-    }
-
-    fun onPostClick() {
-        callbackPostClick(feedPost?.feedPostData)
+        callbackUserNameClick?.invoke(feedPost!!.feedPostUser)
     }
 }

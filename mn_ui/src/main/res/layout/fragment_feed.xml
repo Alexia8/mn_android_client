@@ -65,14 +65,14 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:viewModel="@{viewModel.feedPostsViewModel}"
-                    app:visible="@{viewModel.viewsForFeedVisible}"
+                    app:visible="@{viewModel.feedVisible}"
                     tools:visibility="visible" />
 
                 <com.alexiacdura.mn_ui.ui.components.loading.LoadingLayoutView
                     android:id="@+id/loadMoreView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/base_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/xsmall_4"
                     android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

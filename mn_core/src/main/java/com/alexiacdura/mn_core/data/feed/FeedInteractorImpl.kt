@@ -12,11 +12,17 @@ internal class FeedInteractorImpl(
     private val userDataInteractor: UserDataInteractor
 ) : FeedInteractor {
     private var userId: Int = 1
+    private var limFrom: Int = 0
+    private var limTo: Int = 5
     override fun createFeedStateObservable(
         eventsObservable: Observable<FeedEvent>,
-        userId: Int
+        userId: Int,
+        limFrom: Int,
+        limTo: Int
     ): Observable<FeedState> {
         this.userId = userId
+        this.limFrom = limFrom
+        this.limTo = limTo
 
         val feedFilter = eventsObservable
             .filter { it is FeedEvent.Feed }
@@ -47,7 +53,7 @@ internal class FeedInteractorImpl(
 
         val feedLoadMoreFilter = eventsObservable
             .filter { it is FeedEvent.LoadMore }
-            .switchMap { createLoadMoreStateObservable(it as FeedEvent.LoadMore) }
+            .switchMap { createLoadMoreFeedStateObservable(it as FeedEvent.LoadMore) }
 
         return Observable
             .merge(feedFilter, feedLoadMoreFilter)
@@ -59,7 +65,8 @@ internal class FeedInteractorImpl(
     private fun createFeedStateObservable(
         stateBuilder: (userFeedState: UserFeedState) -> FeedState
     ): Observable<FeedState> {
-        val userFeedObservable = userFeedInteractor.getUserRecentFeedPosts(userId = userId, limFrom = LIMFROM, limTo = LIMTO)
+        val userFeedObservable =
+            userFeedInteractor.getUserRecentFeedPosts(userId = userId, limFrom = limFrom, limTo = limTo)
 
         return userFeedObservable.map {
             when (it) {
@@ -70,8 +77,8 @@ internal class FeedInteractorImpl(
         }
     }
 
-    private fun createLoadMoreStateObservable(event: FeedEvent.LoadMore): Observable<FeedState> {
-        return userFeedInteractor.getUserRecentFeedPosts(userId, LIMFROM + event.skip, LIMTO + event.skip)
+    private fun createLoadMoreFeedStateObservable(event: FeedEvent.LoadMore): Observable<FeedState> {
+        return userFeedInteractor.getUserRecentFeedPosts(userId, event.skip, event.skip + SKIP)
             .map {
                 when (it) {
                     is UserFeedState.Success -> processLoadMoreSuccess(it)
@@ -94,7 +101,8 @@ internal class FeedInteractorImpl(
     private fun createStarredStateObservable(
         stateBuilder: (userStarredState: UserStarredState) -> FeedState
     ): Observable<FeedState> {
-        val userStarredObservable = userFeedInteractor.getUserRecentStarredPosts(userId = userId, limFrom = LIMFROM, limTo = LIMTO)
+        val userStarredObservable =
+            userFeedInteractor.getUserRecentStarredPosts(userId = userId, limFrom = limFrom, limTo = limTo)
 
         return userStarredObservable.map {
             when (it) {
@@ -148,8 +156,7 @@ internal class FeedInteractorImpl(
     }
 
     companion object {
-        private const val LIMFROM = 0
-        private const val LIMTO = 10
         private const val LOADING_LIMIT = 10
+        private const val SKIP = 5
     }
 }

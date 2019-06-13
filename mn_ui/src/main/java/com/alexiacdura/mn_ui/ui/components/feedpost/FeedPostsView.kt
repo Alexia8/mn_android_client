@@ -1,11 +1,11 @@
 package com.alexiacdura.mn_ui.ui.components.feedpost
 
 import android.content.Context
+import android.util.AttributeSet
+import android.widget.FrameLayout
 import androidx.databinding.BaseObservable
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import android.util.AttributeSet
-import android.widget.FrameLayout
 import com.alexiacdura.mn_ui.R
 import com.alexiacdura.mn_ui.core.binding.BindableView
 import com.alexiacdura.mn_ui.core.binding.viewBinding
@@ -13,7 +13,6 @@ import com.alexiacdura.mn_ui.core.binding.viewModel
 import com.alexiacdura.mn_ui.databinding.ViewFeedpostsBinding
 import com.alexiacdura.mn_ui.ui.adapters.any.AnyItemListCallback
 import com.alexiacdura.mn_ui.ui.adapters.any.DefaultMutableAnyAdapter
-import com.alexiacdura.mn_ui.ui.components.ItemDividerDecoration
 
 
 class FeedPostsView @JvmOverloads constructor(
@@ -60,7 +59,7 @@ class FeedPostsView @JvmOverloads constructor(
                     if (totalItemCount > 0) {
                         val positionOfLastItem = layoutManager.findLastVisibleItemPosition()
                         if (positionOfLastItem + itemsBeforeLoadMore >= totalItemCount) {
-                           // callback()
+                            callback()
                         }
                     }
                 }

@@ -12,6 +12,7 @@ import com.alexiacdura.mn_ui.core.binding.BindableView
 import com.alexiacdura.mn_ui.core.binding.viewBinding
 import com.alexiacdura.mn_ui.core.binding.viewModel
 import com.alexiacdura.mn_ui.databinding.ViewLoadingBinding
+import com.alexiacdura.mn_ui.ui.components.loading.LoadingLayoutViewModel
 
 class LoadingLayoutView @JvmOverloads constructor(
     context: Context,

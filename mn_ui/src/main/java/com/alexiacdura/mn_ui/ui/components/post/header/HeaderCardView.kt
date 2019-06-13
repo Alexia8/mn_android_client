@@ -1,6 +1,5 @@
 package com.alexiacdura.mn_ui.ui.components.post.header
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build
 import android.util.AttributeSet
@@ -30,13 +29,13 @@ class HeaderCardView @JvmOverloads constructor(
     override fun bind(viewModel: HeaderCardViewModel) {
         binding.headerViewModel = viewModel
 
-        loadPostImage()
+        loadPostVideo()
 
         convertDate()
     }
 
-    private fun loadPostImage() {
-        //Picasso.get().load(viewModel.postImage.toString()).into(binding.bodyPostImage)
+    private fun loadPostVideo() {
+        //Picasso.get().load(viewModel.postImage.toString()).into(binding.bodyPostImage) //for loading an image instead of video
         binding.youtubeWebView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
                 return false

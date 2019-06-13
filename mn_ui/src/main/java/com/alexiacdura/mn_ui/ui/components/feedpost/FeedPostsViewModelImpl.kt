@@ -8,12 +8,12 @@ import com.alexiacdura.mn_core.data.user.states.UserStarredState
 import com.alexiacdura.mn_ui.BR
 import com.alexiacdura.mn_ui.core.binding.bindableProperty
 import com.alexiacdura.mn_ui.ui.components.post.header.HeaderCardViewModel
+import kotlin.reflect.KFunction1
 
 
 class FeedPostsViewModelImpl(
-    private val userImageCallback: (FeedPost.UserPost?) -> Unit = {},
-    private val userNameCallback: (FeedPost.UserPost?) -> Unit = {},
-    private val postImageCallback: (FeedPost.Post?) -> Unit = {}
+    private var userImageCallback: KFunction1<@ParameterName(name = "user") FeedPost.UserPost, Unit>?,
+    private var userNameCallback: KFunction1<@ParameterName(name = "user") FeedPost.UserPost, Unit>?
 ) : BaseObservable(), FeedPostsViewModel {
 
     override var contentVisible by bindableProperty(false, BR.contentVisible)
@@ -62,7 +62,7 @@ class FeedPostsViewModelImpl(
     }
 
     private fun processSuccessState(items: List<FeedPost>) {
-        this.items = items.map { it.toViewModel() }
+        this.items += items.map { it.toViewModel() }
         showContents()
     }
 
@@ -82,6 +82,12 @@ class FeedPostsViewModelImpl(
     }
 
     private fun FeedPost.toViewModel(): FeedPostsItemViewModel {
-        return FeedPostsItemViewModel(HeaderCardViewModel(this, userImageCallback, userNameCallback, postImageCallback))
+        return FeedPostsItemViewModel(
+            HeaderCardViewModel(
+                this,
+                userImageCallback,
+                userNameCallback
+            )
+        )
     }
 }
