@@ -44,4 +44,30 @@
         <item name="android:background">@mipmap/sample_post_image</item>
     </style>
 
+    <style name="Style.UserCardView.username" parent="AppTheme">
+        <item name="android:textSize">@dimen/font_big_20</item>
+        <item name="android:textColor">@color/white_90</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Style.UserCardView.value" parent="AppTheme">
+        <item name="android:textSize">@dimen/font_base_14</item>
+        <item name="android:textColor">@color/white_100</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="Style.UserCardView.value.circled" parent="Style.UserCardView.value">
+        <item name="android:background">@drawable/circle_background</item>
+    </style>
+
+    <style name="Style.UserCardView.value.clickable" parent="Style.UserCardView.value">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Style.UserCardView.title" parent="AppTheme">
+        <item name="android:textSize">@dimen/font_base_12</item>
+        <item name="android:textColor">@color/white_80</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
 </resources>

@@ -4,11 +4,14 @@
     <string name="title_favourites">Favourites</string>
     <string name="title_profile">Profile</string>
 
-    //Error View Strings
     <string name="title_error">Oops!</string>
     <string name="text_error">There was an error, please try again.</string>
     <string name="text_retry">Retry</string>
 
-    //Loading View Strings
     <string name="title_loading">Loading..</string>
+    <string name="title_shared">Shared</string>
+    <string name="title_starred">Starred</string>
+    <string name="title_followers">Followers</string>
+    <string name="title_followings">Followings</string>
+    <string name="title_styles">Styles</string>
 </resources>

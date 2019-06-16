@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.alexiacdura.mn_ui.ui.components.user.UserCardViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardElevation="@dimen/small_8"
+        app:cardUseCompatPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/base_16"
+            android:paddingTop="@dimen/base_16"
+            android:paddingEnd="@dimen/base_16"
+            android:paddingBottom="@dimen/base_16">
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/ic_default_user_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/username"
+                style="@style/Style.UserCardView.username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/xsmall_4"
+                android:text="Alexia C Dura"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Alexia C Dura" />
+
+            <ImageView
+                android:id="@+id/followBtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="@dimen/user_card_margin_row"
+                android:layout_marginTop="@dimen/small_8"
+                android:background="@drawable/ic_add_friend"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/postQuantity"
+                style="@style/Style.UserCardView.value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.postQuantity}"
+                app:layout_constraintEnd_toEndOf="@id/postQuantityTitle"
+                app:layout_constraintStart_toStartOf="@id/postQuantityTitle"
+                app:layout_constraintTop_toBottomOf="@id/username"
+                tools:text="100" />
+
+            <TextView
+                android:id="@+id/postQuantityTitle"
+                style="@style/Style.UserCardView.title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/user_card_margin_row"
+                android:text="@string/title_shared"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/postQuantity" />
+
+            <TextView
+                android:id="@+id/starsQuantity"
+                style="@style/Style.UserCardView.value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.starredQuantity}"
+                app:layout_constraintEnd_toEndOf="@id/starsQuantityTitle"
+                app:layout_constraintStart_toStartOf="@id/starsQuantityTitle"
+                app:layout_constraintTop_toBottomOf="@id/username"
+                tools:text="100" />
+
+            <TextView
+                android:id="@+id/starsQuantityTitle"
+                style="@style/Style.UserCardView.title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/user_card_margin_row"
+                android:text="@string/title_starred"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/starsQuantity" />
+
+            <View
+                android:id="@+id/followersBackground"
+                style="@style/Style.UserCardView.value.circled"
+                android:layout_width="@dimen/user_card_button_width"
+                android:layout_height="@dimen/user_card_button_height"
+                app:layout_constraintEnd_toEndOf="@id/followersTitle"
+                app:layout_constraintStart_toStartOf="@id/followersTitle"
+                app:layout_constraintTop_toTopOf="@id/followers" />
+
+            <TextView
+                android:id="@+id/followers"
+                style="@style/Style.UserCardView.value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_16"
+                app:layout_constraintEnd_toEndOf="@id/followersTitle"
+                app:layout_constraintStart_toStartOf="@id/followersTitle"
+                app:layout_constraintTop_toBottomOf="@id/postQuantityTitle"
+                tools:text="100" />
+
+            <TextView
+                android:id="@+id/followersTitle"
+                style="@style/Style.UserCardView.title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/xlarge_32"
+                android:text="@string/title_followers"
+                app:layout_constraintRight_toLeftOf="@id/followingsTitle"
+                app:layout_constraintTop_toBottomOf="@id/followers" />
+
+            <View
+                android:id="@+id/followingsBackground"
+                style="@style/Style.UserCardView.value.circled"
+                android:layout_width="@dimen/user_card_button_width"
+                android:layout_height="@dimen/user_card_button_height"
+                app:layout_constraintEnd_toEndOf="@id/followingsTitle"
+                app:layout_constraintStart_toStartOf="@id/followingsTitle"
+                app:layout_constraintTop_toTopOf="@id/followings" />
+
+            <TextView
+                android:id="@+id/followings"
+                style="@style/Style.UserCardView.value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_16"
+                app:layout_constraintEnd_toEndOf="@id/followingsTitle"
+                app:layout_constraintStart_toStartOf="@id/followingsTitle"
+                app:layout_constraintTop_toBottomOf="@id/postQuantityTitle"
+                tools:text="100" />
+
+            <TextView
+                android:id="@+id/followingsTitle"
+                style="@style/Style.UserCardView.title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_followings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/followings" />
+
+
+            <View
+                android:id="@+id/stylesBackground"
+                style="@style/Style.UserCardView.value.circled"
+                android:layout_width="@dimen/user_card_button_width"
+                android:layout_height="@dimen/user_card_button_height"
+                app:layout_constraintEnd_toEndOf="@id/stylesTitle"
+                app:layout_constraintStart_toStartOf="@id/stylesTitle"
+                app:layout_constraintTop_toTopOf="@id/styles" />
+
+            <TextView
+                android:id="@+id/styles"
+                style="@style/Style.UserCardView.value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_16"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@id/stylesTitle"
+                app:layout_constraintStart_toStartOf="@id/stylesTitle"
+                app:layout_constraintTop_toBottomOf="@id/postQuantityTitle" />
+
+            <TextView
+                android:id="@+id/stylesTitle"
+                style="@style/Style.UserCardView.title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="@string/title_styles"
+                app:layout_constraintLeft_toRightOf="@id/followingsTitle"
+                app:layout_constraintTop_toBottomOf="@id/styles" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

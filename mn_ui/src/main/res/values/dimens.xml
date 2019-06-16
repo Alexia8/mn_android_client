@@ -8,6 +8,12 @@
     <dimen name="xsmall_4">4dp</dimen>
     <dimen name="xxsmall_2">2dp</dimen>
 
+    <!-- DP Size for user card margins. -->
+    <dimen name="user_card_margin_row">50dp</dimen>
+    <dimen name="user_card_height">150dp</dimen>
+    <dimen name="user_card_button_width">70dp</dimen>
+    <dimen name="user_card_button_height">46dp</dimen>
+
     <!-- SP sizes. -->
     <dimen name="font_large_24">24sp</dimen>
     <dimen name="font_big_20">20sp</dimen>
