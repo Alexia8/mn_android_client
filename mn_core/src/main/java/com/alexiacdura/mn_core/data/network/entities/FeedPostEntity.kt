@@ -22,7 +22,7 @@ internal data class FeedPostEntity(
         @SerializedName("id") val id: Int,
         @SerializedName("title") val title: String,
         @SerializedName("imageUrl") val postImage: URL,
-        @SerializedName("postUrl") val postUrl: URL,
+        @SerializedName("postUrl") val postUrl: String,
         @SerializedName("postGenres") val postGenres: List<PostGenre>?
     ) {
         data class PostGenre(

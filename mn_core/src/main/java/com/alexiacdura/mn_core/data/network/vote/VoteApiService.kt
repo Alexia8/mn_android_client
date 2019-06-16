@@ -8,16 +8,16 @@ import retrofit2.http.*
 internal interface VoteApiService {
 
     companion object {
-        const val API_PATH = "/api"
+        const val API_PATH = "api/Votes"
     }
 
     /** Create a vote by user and feedPostId*/
     @Headers("Content-Type: application/json")
-    @POST("$API_PATH/Votes")
+    @POST(API_PATH)
     fun createVote(@Body vote: Vote): Single<VoteResponseEntity>
 
     /** Delete vote by id*/
-    @DELETE("$API_PATH/Votes/{voteId}")
+    @DELETE("$API_PATH{voteId}")
     fun deleteVote(
         @Query("starId") voteId: Int
     ): Single<VoteResponseEntity>

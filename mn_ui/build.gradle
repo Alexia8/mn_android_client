@@ -1,51 +1,96 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"
+apply plugin: "androidx.navigation.safeargs"
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion COMPILE_SDK_VERSION
 
+    dexOptions {
+        javaMaxHeapSize "3g"
+        preDexLibraries = false
+    }
+
+    dataBinding {
+        enabled = true
+    }
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 28
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
 
     buildTypes {
         release {
-            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled false
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    lintOptions {
+        warningsAsErrors true
+        abortOnError false // Disabling or it will be painful: true
+        checkReleaseBuilds true
+        htmlReport true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':mn_core')
 
-    //Koin
-    implementation "org.koin:koin-android:${koinVersion}"
-    implementation "org.koin:koin-android-scope:${koinVersion}"
-    implementation "org.koin:koin-android-viewmodel:${koinVersion}"
+    //navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 
-    implementation "com.android.support:appcompat-v7:$supportVersion"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //Lifecycle
+    implementation "androidx.lifecycle:lifecycle-extensions:${lifecycleExtensionsVersion}"
 
-    //design
-    implementation "com.android.support:design:$supportVersion"
-    implementation "com.android.support:recyclerview-v7:$supportVersion"
-    implementation "com.android.support:cardview-v7:$supportVersion"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //test
+    testImplementation "junit:junit:${junitVersion}"
+    testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+    testImplementation "com.squareup.assertj:assertj-android:${assertjVersion}"
+
+    //Androidx
+    api "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}"
+    api "androidx.recyclerview:recyclerview:${recyclerviewVersion}"
+    api "androidx.appcompat:appcompat:${appcompatVersion}"
+    api "androidx.annotation:annotation:${annotationVersion}"
+    api "androidx.palette:palette:${paletteVersion}"
+
+    //picasso
+    api "com.squareup.picasso:picasso:${picassoVersion}"
 }
-repositories {
-    mavenCentral()
+
+configurations.all {
+    resolutionStrategy {
+        force "com.android.support:gridlayout-v7:${supportLibVersion}"
+        force "com.android.support:cardview-v7:${supportLibVersion}"
+        force "com.android.support:customtabs:${supportLibVersion}"
+        force "com.android.support:support-annotations:${supportLibVersion}"
+        force "com.android.support:support-compat:${supportLibVersion}"
+        force "com.android.support:support-core-utils:${supportLibVersion}"
+        force "com.android.support:support-core-ui:${supportLibVersion}"
+        force "com.android.support:support-fragment:${supportLibVersion}"
+        force "com.android.support:animated-vector-drawable:${supportLibVersion}"
+        force "com.android.support:exifinterface:${supportLibVersion}"
+        force "com.android.support:support-media-compat:${supportLibVersion}"
+        force "com.android.support:support-v4:${supportLibVersion}"
+    }
 }
+

@@ -43,69 +43,58 @@ private fun FeedPostEntity.post(): FeedPost.Post {
 }
 
 private fun FeedPostEntity.postGenres(): List<FeedPost.Post.PostGenre> {
-    postFeedPost.postGenres.let { postGenres ->
-        val postGenreList = listOf<FeedPost.Post.PostGenre>()
-        postGenres?.forEach { postGenre ->
-            postGenre.genre.let { genre ->
-                object : FeedPost.Post.PostGenre.Genre {
-                    override val id = genre.id
-                    override val name = genre.name
-                    override val style = genre.style.let { style ->
-                        object : FeedPost.Post.PostGenre.Genre.Style {
-                            override val id = style.id
-                            override val name = style.name
+    return postFeedPost.postGenres!!.map {
+        it.let { postGenre ->
+            object : FeedPost.Post.PostGenre {
+                override val genre = postGenre.genre.let { genre ->
+                    object : FeedPost.Post.PostGenre.Genre {
+                        override val id = genre.id
+                        override val name = genre.name
+                        override val style = genre.style.let { style ->
+                            object : FeedPost.Post.PostGenre.Genre.Style {
+                                override val id = style.id
+                                override val name = style.name
+                            }
                         }
                     }
                 }
-                postGenreList.plus(genre)
             }
         }
-        return postGenreList
     }
 }
 
-private fun FeedPostEntity.postStars(): List<FeedPost.Star> {
-    starsFeedPost.let { postStars ->
-        val postStarList = listOf<FeedPost.Star>()
-        postStars?.forEach { star ->
-            object : FeedPost.Star {
-                override val id = star.idStar
-                override val dateStar = star.dateStar
-                override val feedPostIdStar = star.feedPostId
-                override val userStar = star.userStar.let { userStar ->
-                    object : FeedPost.Star.UserStar {
-                        override val id = userStar.id
-                        override val username = userStar.username
-                        override val imageUrl = userStar.imageUrl
-                    }
+private fun FeedPostEntity.postStars(): List<FeedPost.Star>? {
+    return starsFeedPost?.map {
+        object : FeedPost.Star {
+            override val id = it.idStar
+            override val dateStar = it.dateStar
+            override val feedPostIdStar = it.feedPostId
+            override val userStar = it.userStar.let { userStar ->
+                object : FeedPost.Star.UserStar {
+                    override val id = userStar.id
+                    override val username = userStar.username
+                    override val imageUrl = userStar.imageUrl
                 }
             }
-            postStarList.plus(star)
         }
-        return postStarList
     }
 }
 
-private fun FeedPostEntity.postVotes(): List<FeedPost.Vote> {
-    votesFeedPost.let { postVotes ->
-        val postVoteList = listOf<FeedPost.Vote>()
-        postVotes?.forEach { vote ->
-            object : FeedPost.Vote {
-                override val id = vote.id
-                override val upvote = vote.upvote
-                override val dateVote = vote.dateVote
-                override val feedPostIdVote = vote.feedPostId
-                override val userVote = vote.userVote.let { userVote ->
-                    object : FeedPost.Vote.UserVote {
-                        override val id = userVote.id
-                        override val username = userVote.username
-                        override val imageUrl = userVote.imageUrl
-                    }
+private fun FeedPostEntity.postVotes(): List<FeedPost.Vote>? {
+    return votesFeedPost?.map {
+        object : FeedPost.Vote {
+            override val id = it.id
+            override val upvote = it.upvote
+            override val dateVote = it.dateVote
+            override val feedPostIdVote = it.feedPostId
+            override val userVote = it.userVote.let { userVote ->
+                object : FeedPost.Vote.UserVote {
+                    override val id = userVote.id
+                    override val username = userVote.username
+                    override val imageUrl = userVote.imageUrl
                 }
             }
-            postVoteList.plus(vote)
         }
-        return postVoteList
     }
 }
 
@@ -122,16 +111,11 @@ internal fun UserEntity.toUser(): User {
 }
 
 private fun UserEntity.userStyles(): List<User.Style> {
-    likedStyles.let { userStyles ->
-        val userStylesList = listOf<User.Style>()
-        userStyles.forEach { style ->
-            object : User.Style {
-                override val id = style.id
-                override val name = style.name
-            }
-            userStylesList.plus(style)
+    return likedStyles.map {
+        object : User.Style {
+            override val id = it.id
+            override val name = it.name
         }
-        return userStylesList
     }
 }
 
@@ -147,34 +131,24 @@ internal fun UserDataEntity.toUserData(): UserData {
 }
 
 private fun UserDataEntity.userFollowings(): List<UserData.User> {
-    followings.let { userFollowings ->
-        val userFollowingsList = listOf<UserData.User>()
-        userFollowings.forEach { following ->
-            object : UserData.User {
-                override val id = following.id
-                override val username = following.username
-                override val email = following.email
-                override val imageUrl = following.imageUrl
-            }
-            userFollowingsList.plus(following)
+    return followings.map {
+        object : UserData.User {
+            override val id = it.id
+            override val username = it.username
+            override val email = it.email
+            override val imageUrl = it.imageUrl
         }
-        return userFollowingsList
     }
 }
 
 private fun UserDataEntity.userFollowers(): List<UserData.User> {
-    followers.let { userFollowers ->
-        val userFollowersList = listOf<UserData.User>()
-        userFollowers.forEach { follower ->
-            object : UserData.User {
-                override val id = follower.id
-                override val username = follower.username
-                override val email = follower.email
-                override val imageUrl = follower.imageUrl
-            }
-            userFollowersList.plus(follower)
+    return followers.map {
+        object : UserData.User {
+            override val id = it.id
+            override val username = it.username
+            override val email = it.email
+            override val imageUrl = it.imageUrl
         }
-        return userFollowersList
     }
 }
 

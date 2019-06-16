@@ -17,17 +17,10 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        setupKoin(instance)
+        setupKoin(this)
     }
 
     private fun setupKoin(app: App) {
         KoinModules.setup(app)
-    }
-
-    companion object {
-
-        lateinit var instance: App
-            private set
-
     }
 }

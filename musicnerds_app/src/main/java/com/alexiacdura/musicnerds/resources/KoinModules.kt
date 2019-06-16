@@ -3,9 +3,8 @@ package com.alexiacdura.musicnerds.resources
 import com.alexiacdura.mn_core.core.factory.DefaultOKHttpClientBuilder
 import com.alexiacdura.mn_core.core.factory.OKHttpClientBuilderFactory
 import com.alexiacdura.mn_core.core.koin.coreKoinModules
-import com.alexiacdura.mn_core.core.rx.MockSchedulerProvider
 import com.alexiacdura.mn_core.core.rx.SchedulersProvider
-import com.alexiacdura.mn_ui.Utils.koin.uiKoinModules
+import com.alexiacdura.mn_ui.core.koin.uiKoinModules
 import com.alexiacdura.musicnerds.App
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.logger.AndroidLogger

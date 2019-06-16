@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.alexiacdura.mn_ui.ui.components.error.ErrorViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="@color/white_90"
+        tools:showIn="@layout/fragment_feed">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/large_24"
+            android:layout_marginBottom="@dimen/large_24"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toTopOf="@id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_error_view" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_8"
+            android:paddingStart="@dimen/base_16"
+            android:paddingEnd="@dimen/base_16"
+            android:text="@{viewModel.title}"
+            app:layout_constraintBottom_toTopOf="@id/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon"
+            app:visible="@{viewModel.titleVisibility}"
+            tools:text="@string/title_error"
+            tools:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/large_24"
+            android:paddingStart="@dimen/base_16"
+            android:paddingEnd="@dimen/base_16"
+            android:text="@{viewModel.description}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/font_base_12"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:visible="@{viewModel.descriptionVisibility}"
+            tools:text="@string/text_error" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/large_24"
+            android:background="@color/colorSecondary"
+            android:onClick="@{() -> viewModel.onActionButtonPressed()}"
+            android:text="@{viewModel.actionButtonText}"
+            android:textColor="@color/white_90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:visible="@{viewModel.actionButtonVisibility}"
+            tools:text="Try Again" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

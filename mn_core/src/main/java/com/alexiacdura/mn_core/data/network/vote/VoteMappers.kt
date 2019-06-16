@@ -3,7 +3,7 @@ package com.alexiacdura.mn_core.data.network.vote
 import com.alexiacdura.mn_core.data.models.VoteResponse
 import com.alexiacdura.mn_core.data.network.entities.VoteResponseEntity
 
-/** FeedPost mapping */
+/** VoteResponse mapping */
 @Suppress("ThrowsCount")
 internal fun VoteResponseEntity.createVoteResponse(): VoteResponse {
     return object : VoteResponse {

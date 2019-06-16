@@ -75,11 +75,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ffffff" />
                                       <entry key="foregroundImage" value="$USER_HOME$/Desktop/Musicnerds/Logos/Theme1/PlayStore - Icon 1- Theme 1 INVERSE - no_background copy.png" />
                                       <entry key="outputName" value="ic_splash_logo" />
-                                      <entry key="previewDensity" value="XXXHIGH" />
-                                      <entry key="webIconShape" value="NONE" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -107,7 +104,6 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="paddingPercent" value="-5" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -120,8 +116,8 @@
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="backgroundColor" value="e5e4e1" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/Musicnerds/Logos/Theme1/Icon-60@2x - Theme 1 - INVERSE - no_background.png" />
-                                      <entry key="outputName" value="ic_mn_logo_icon" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/hot-coffee-rounded-cup-on-a-plate-from-side-view.png" />
+                                      <entry key="outputName" value="ic_error_icon" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -192,9 +188,9 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="height" value="512" />
-                            <entry key="outputName" value="ic_default_user" />
+                            <entry key="outputName" value="ic_add_friend" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/round-account-button-with-user-inside.svg" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/add-friend.svg" />
                             <entry key="width" value="512" />
                           </map>
                         </option>

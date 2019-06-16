@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="binding_viewholder_layout_id" type="id" />
+    <item name="binding_viewholder_content_model" type="id" />
+</resources>

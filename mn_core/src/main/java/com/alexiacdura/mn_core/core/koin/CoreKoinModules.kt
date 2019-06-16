@@ -2,6 +2,10 @@ package com.alexiacdura.mn_core.core.koin
 
 import com.alexiacdura.mn_core.core.factory.DefaultServiceFactory
 import com.alexiacdura.mn_core.core.factory.ServiceFactory
+import com.alexiacdura.mn_core.data.feed.FeedInteractor
+import com.alexiacdura.mn_core.data.feed.FeedInteractorImpl
+import com.alexiacdura.mn_core.data.feed.UserPostsInteractor
+import com.alexiacdura.mn_core.data.feed.UserPostsInteractorImpl
 import com.alexiacdura.mn_core.data.network.star.StarApi
 import com.alexiacdura.mn_core.data.network.star.StarApiImpl
 import com.alexiacdura.mn_core.data.network.star.StarApiService
@@ -55,4 +59,17 @@ val coreKoinModules = module {
 
     single { CreateVoteInteractorImpl(voteApi = get()) as CreateVoteInteractor }
     single { DeleteVoteInteractorImpl(voteApi = get()) as DeleteVoteInteractor }
+
+    single {
+        FeedInteractorImpl(
+            userFeedInteractor = get()
+        ) as FeedInteractor
+    }
+
+    single {
+        UserPostsInteractorImpl(
+            userFeedInteractor = get(),
+            userDataInteractor = get()
+        ) as UserPostsInteractor
+    }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="loadingViewModel"
+            type="com.alexiacdura.mn_ui.ui.components.loading.LoadingLayoutViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:showIn="@layout/fragment_feed">
+
+        <ImageView
+            android:id="@+id/loading_layout_progress"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toTopOf="@id/loading_layout_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@mipmap/ic_mn_logo_icon_toolbar" />
+
+        <TextView
+            android:id="@+id/loading_layout_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_8"
+            android:gravity="center_horizontal"
+            android:text="@string/title_loading"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_base_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loading_layout_progress" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

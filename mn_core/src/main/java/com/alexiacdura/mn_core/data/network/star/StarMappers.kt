@@ -3,7 +3,7 @@ package com.alexiacdura.mn_core.data.network.star
 import com.alexiacdura.mn_core.data.models.StarResponse
 import com.alexiacdura.mn_core.data.network.entities.StarResponseEntity
 
-/** FeedPost mapping */
+/** StarResponse mapping */
 @Suppress("ThrowsCount")
 internal fun StarResponseEntity.createStarResponse(): StarResponse {
     return object : StarResponse {

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/feedFragment">
+
+    <action
+        android:id="@+id/action_feedFragment"
+        app:destination="@id/feedFragment" />
+
+    <action
+        android:id="@+id/action_starredFragment"
+        app:destination="@id/starredFragment" />
+
+    <action
+        android:id="@+id/action_profileFragment"
+        app:destination="@id/profileFragment" />
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.alexiacdura.mn_ui.ui.feed.FeedFragment"
+        android:label="FeedFragment">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/starredFragment"
+        android:name="com.alexiacdura.mn_ui.ui.starred.StarredFragment"
+        android:label="StarredFragment">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.alexiacdura.mn_ui.ui.profile.ProfileFragment"
+        android:label="ProfileFragment">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
