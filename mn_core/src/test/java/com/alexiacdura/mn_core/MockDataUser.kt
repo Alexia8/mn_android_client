@@ -32,7 +32,7 @@ fun getTestFeedPostUserFeed(): FeedPost {
         override val id = 12
         override val title = "Fkj & Masego - Tadow"
         override val postImage = URL("https://i.ytimg.com/vi/hC8CH0Z3L54/default.jpg")
-        override val postUrl = URL("https://www.youtube.com/watch?v=hC8CH0Z3L54")
+        override val postUrl: String = "https://www.youtube.com/watch?v=hC8CH0Z3L54"
         override val postGenres = postGenresList
     }
 
@@ -125,7 +125,7 @@ fun getTestFeedPostUserStarred(): FeedPost {
         override val id = 11
         override val title = "Gary B.B. Coleman - The Sky is Crying"
         override val postImage = URL("https://i.ytimg.com/vi/71Gt46aX9Z4/default.jpg")
-        override val postUrl = URL("https://www.youtube.com/watch?v=71Gt46aX9Z4")
+        override val postUrl: String = "https://www.youtube.com/watch?v=71Gt46aX9Z4"
         override val postGenres = postGenresList
     }
 

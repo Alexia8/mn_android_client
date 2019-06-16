@@ -22,7 +22,6 @@ internal interface UserApiService {
     ): Single<UserEntity>
 
     /** Retrieve user with feed posts sorted from backend*/
-    @Headers("Content-Type: application/json; charset=utf-8")
     @GET("$API_PATH/{user}/userFeed")
     fun getUserFeed(
         @Path("user") user: Int,
@@ -47,7 +46,7 @@ internal interface UserApiService {
     ): Single<List<FeedPostEntity>>
 
     /** Retrieve user data, including posts, stars quantity and followings/followers objects*/
-    @GET("/{userId}")
+    @GET("$API_PATH/{userId}/userData")
     fun getUserData(
         @Path("userId") userId: Int
     ): Single<UserDataEntity>

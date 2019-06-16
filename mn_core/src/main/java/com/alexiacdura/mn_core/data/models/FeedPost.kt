@@ -7,8 +7,8 @@ interface FeedPost {
     val feedPostDate: Int
     val feedPostUser: UserPost
     val feedPostData: Post
-    val feedPostStars: List<Star>
-    val feedPostVotes: List<Vote>
+    val feedPostStars: List<Star>?
+    val feedPostVotes: List<Vote>?
 
     interface UserPost {
         val id: Int
