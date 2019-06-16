@@ -1,4 +1,4 @@
-package com.alexiacdura.mn_ui.ui.feed
+package com.alexiacdura.mn_ui.ui.starred
 
 import android.content.Context
 import android.os.Bundle
@@ -10,17 +10,17 @@ import androidx.navigation.fragment.navArgs
 import com.alexiacdura.mn_ui.BR
 import com.alexiacdura.mn_ui.R
 import com.alexiacdura.mn_ui.core.binding.BindingViewInflater
-import com.alexiacdura.mn_ui.databinding.FragmentFeedBinding
+import com.alexiacdura.mn_ui.databinding.FragmentStarredBinding
 import org.koin.android.viewmodel.ext.android.viewModel
 
-internal class FeedFragment : Fragment() {
+internal class StarredFragment : Fragment() {
 
-    val viewModel by viewModel<FeedViewModel>()
-    private lateinit var binding: FragmentFeedBinding
+    val viewModel by viewModel<StarredViewModel>()
+    private lateinit var binding: FragmentStarredBinding
 
-    private val args: FeedFragmentArgs by navArgs()
+    private val args: StarredFragmentArgs by navArgs()
 
-    private val fragmentInflater = BindingViewInflater(resId = R.layout.fragment_feed)
+    private val fragmentInflater = BindingViewInflater(resId = R.layout.fragment_starred)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -28,14 +28,15 @@ internal class FeedFragment : Fragment() {
 
         binding.feedPostsView.setOnLoadMoreCallback(::onLoadMore)
 
-        viewModel.init(getUserId())
+        viewModel.init(args.userId)
 
         return binding.root
     }
 
     override fun onStart() {
         super.onStart()
-        viewModel.feedStart()
+        // viewModel.postEvent(FeedUiEvent.Starred)
+        viewModel.starredStart()
     }
 
     private fun onLoadMore() {
@@ -46,24 +47,5 @@ internal class FeedFragment : Fragment() {
         binding = fragmentInflater.inflate(context, container)
         binding.setVariable(BR.viewModel, viewModel)
         binding.lifecycleOwner = this
-    }
-
-    private fun getUserId(): Int {
-        return arguments?.getInt(USERID_ARGUMENT) ?: 0
-    }
-
-    companion object {
-
-        private const val USERID_ARGUMENT = "userId"
-
-        fun newInstance(userId: Int): FeedFragment {
-            val fragment = FeedFragment()
-
-            val arguments = Bundle()
-            arguments.putInt(USERID_ARGUMENT, userId)
-            fragment.arguments = arguments
-
-            return fragment
-        }
     }
 }

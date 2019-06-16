@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.alexiacdura.mn_ui.ui.feed.FeedViewModel" />
+            type="com.alexiacdura.mn_ui.ui.profile.ProfileViewModel" />
     </data>
 
     <FrameLayout
@@ -17,14 +17,18 @@
         android:layout_height="match_parent"
         tools:showIn="com.alexiacdura.mn_ui.MusicnerdsActivity">
 
+        <com.alexiacdura.mn_ui.ui.components.user.UserCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:viewModel="@{viewModel.userCardViewModel}"
+            app:visible="@{viewModel.feedVisible}"/>
+
         <androidx.core.widget.NestedScrollView
             android:id="@+id/feedScrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true"
-            android:fitsSystemWindows="true"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            app:layout_scrollFlags="scroll|enterAlways">
+            android:fitsSystemWindows="true">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/feed"
@@ -66,7 +70,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:viewModel="@{viewModel.feedPostsViewModel}"
+                    android:layout_marginTop="160dp"
+                    app:viewModel="@{viewModel.userPostsViewModel}"
                     app:visible="@{viewModel.feedVisible}"
                     tools:visibility="visible" />
 

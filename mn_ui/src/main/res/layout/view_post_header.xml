@@ -76,6 +76,7 @@
                 style="@style/Style.HeaderView.Date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingTop="@dimen/xsmall_4"
                 android:paddingStart="@dimen/base_16"
                 android:paddingEnd="@dimen/base_16"
                 android:text="@{headerViewModel.datePost}"
@@ -91,13 +92,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="12dp"
+                android:background="@mipmap/youtube_placeholder"
                 android:contentDescription="@null"
                 android:scaleType="fitXY"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:layout_constraintStart_toEndOf="@id/userImage"
-                app:layout_constraintTop_toBottomOf="@id/postTitle"
-                tools:background="@mipmap/sample_post_image"
-                tools:showIn="@layout/view_post_body_card" />
+                app:layout_constraintTop_toBottomOf="@id/postTitle" />
 
             <WebView
                 android:id="@+id/youtubeWebView"
@@ -105,6 +105,7 @@
                 android:layout_height="150dp"
                 android:layout_marginTop="12dp"
                 android:scaleType="centerInside"
+                android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@id/userImage"
                 app:layout_constraintTop_toBottomOf="@id/postTitle"
                 tools:background="@mipmap/sample_post_image" />

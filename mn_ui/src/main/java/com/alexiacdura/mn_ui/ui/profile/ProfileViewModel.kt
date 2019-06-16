@@ -1,13 +1,16 @@
-package com.alexiacdura.mn_ui.ui.feed
+package com.alexiacdura.mn_ui.ui.profile
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.alexiacdura.mn_core.core.rx.SchedulersProvider
 import com.alexiacdura.mn_core.data.feed.FeedEvent
-import com.alexiacdura.mn_core.data.feed.FeedInteractor
 import com.alexiacdura.mn_core.data.feed.FeedState
+import com.alexiacdura.mn_core.data.feed.UserPostsInteractor
 import com.alexiacdura.mn_core.data.models.FeedPost
-import com.alexiacdura.mn_core.data.user.states.UserFeedState
+import com.alexiacdura.mn_core.data.models.UserData
+import com.alexiacdura.mn_core.data.user.states.UserDataState
+import com.alexiacdura.mn_core.data.user.states.UserPostsState
 import com.alexiacdura.mn_ui.MusicnerdsRouter
 import com.alexiacdura.mn_ui.R
 import com.alexiacdura.mn_ui.core.utils.resources.AppConstants
@@ -15,16 +18,18 @@ import com.alexiacdura.mn_ui.core.viewmodel.RxAndroidViewModel
 import com.alexiacdura.mn_ui.ui.components.error.ErrorViewModel
 import com.alexiacdura.mn_ui.ui.components.feedpost.FeedPostsViewModelImpl
 import com.alexiacdura.mn_ui.ui.components.loading.LoadingLayoutViewModel
+import com.alexiacdura.mn_ui.ui.components.user.UserCardViewModelImpl
+
 import io.reactivex.subjects.PublishSubject
 
-internal class FeedViewModel(
-    private val interactor: FeedInteractor,
+internal class ProfileViewModel(
+    private val interactor: UserPostsInteractor,
     application: Application,
     private val router: MusicnerdsRouter,
     private val schedulersProvider: SchedulersProvider
 ) : RxAndroidViewModel(application) {
 
-    private val feedPublisher = PublishSubject.create<FeedEvent>()
+    private val profilePublisher = PublishSubject.create<FeedEvent>()
     private var userId: Int = 0
 
     val viewsForFeedLoadingVisible = MutableLiveData<Boolean>()
@@ -35,56 +40,59 @@ internal class FeedViewModel(
     val errorViewModel = MutableLiveData<ErrorViewModel>().apply { value = ErrorViewModel() }
     val loadingViewModel = MutableLiveData<LoadingLayoutViewModel>().apply { value = LoadingLayoutViewModel() }
 
-    val feedPostsViewModel = FeedPostsViewModelImpl(::userImageCallback, ::userNameCallback)
-
+    val userPostsViewModel = FeedPostsViewModelImpl(::userImageCallback, ::userNameCallback)
+    val userCardViewModel = UserCardViewModelImpl(::followersCallback, ::followingsCallback)
 
     fun init(userId: Int) {
         this.userId = userId
 
         val subscriber = interactor
-            .createFeedStateObservable(feedPublisher, userId, AppConstants.LIMFROM, AppConstants.LIMTO)
+            .createFeedStateObservable(profilePublisher, userId, AppConstants.LIMFROM, AppConstants.LIMTO)
             .observeOn(schedulersProvider.main())
             .subscribe(::handleFeedStates, ::showError)
         registerDisposable(subscriber)
     }
 
-    fun feedStart() {
-        feedPublisher.onNext(FeedEvent.Feed)
+    fun profileStart() {
+        profilePublisher.onNext(FeedEvent.UserPosts)
     }
 
     fun loadMore() {
-        feedPublisher.onNext(FeedEvent.LoadMoreFeed(feedPostsViewModel.items.size))
+        profilePublisher.onNext(FeedEvent.LoadMoreProfile(userPostsViewModel.items.size))
     }
-
 
     private fun handleFeedStates(state: FeedState) {
         when (state) {
             is FeedState.Loading -> updateVisibilityState(loadingVisible = true)
             is FeedState.Error -> showError(state.throwable)
-            is FeedState.Feed.SuccessInitial -> handleFeedInitialState(state.userFeedState)
+            is FeedState.UserPosts.SuccessInitial -> handleUserPostsInitialState(
+                state.userPostsState,
+                state.userDataState
+            )
             is FeedState.LoadingMore -> updateVisibilityState(
                 loadingVisible = false,
                 feedVisible = true,
                 loadingLatestVisible = true
             )
-            is FeedState.Feed.SuccessMore -> handleMorePostsLoaded(state.userFeedState)
-            is FeedState.Feed.SuccessEnd -> updateVisibilityState(loadingLatestVisible = false)
+            is FeedState.UserPosts.SuccessMore -> handleMorePostsLoaded(state.userPostsState)
+            is FeedState.UserPosts.SuccessEnd -> updateVisibilityState(loadingLatestVisible = false)
         }
     }
 
-    private fun handleFeedInitialState(userFeedState: UserFeedState) {
-        feedPostsViewModel.update(userFeedState)
+    private fun handleUserPostsInitialState(userPostsState: UserPostsState, userDataState: UserDataState) {
+        userPostsViewModel.update(userPostsState)
+        userCardViewModel.update(userDataState)
         updateVisibilityState(loadingVisible = false, feedVisible = true)
     }
 
-    private fun handleMorePostsLoaded(userFeedState: UserFeedState) {
+    private fun handleMorePostsLoaded(userPostsState: UserPostsState) {
         updateVisibilityState(
             loadingVisible = false,
             errorVisible = false,
             feedVisible = true,
             loadingLatestVisible = false
         )
-        feedPostsViewModel.update(userFeedState)
+        userPostsViewModel.update(userPostsState)
     }
 
     private fun showError(throwable: Throwable) {
@@ -96,10 +104,11 @@ internal class FeedViewModel(
                 title = application.getString(R.string.title_error),
                 description = application.getString(R.string.text_error),
                 actionButtonVisibility = true,
-                callback = { feedStart() }
+                callback = { profileStart() }
             )
         )
         updateVisibilityState(errorVisible = true)
+        Log.d("ProfileViewModel", "error in call: " + throwable.printStackTrace())
     }
 
     @Suppress("LongParameterList")
@@ -125,6 +134,14 @@ internal class FeedViewModel(
         if (this.userId != user.id) {
             router.openProfileFragment(user.id)
         }
+    }
+
+    private fun followersCallback(followesList: List<UserData.User>) {
+        Log.d("ProfileViewModel", "Followers click")
+    }
+
+    private fun followingsCallback(followingsList: List<UserData.User>) {
+        Log.d("ProfileViewModel", "Following click")
     }
 }
 

@@ -6,6 +6,8 @@ import com.alexiacdura.mn_ui.BuildConfig
 import com.alexiacdura.mn_ui.MusicnerdsRouter
 import com.alexiacdura.mn_ui.core.utils.resources.AndroidFileAssets
 import com.alexiacdura.mn_ui.ui.feed.FeedViewModel
+import com.alexiacdura.mn_ui.ui.profile.ProfileViewModel
+import com.alexiacdura.mn_ui.ui.starred.StarredViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -19,4 +21,6 @@ val uiKoinModules = module {
     single(KoinNames.MUSICNERDS_IS_DEBUG) { BuildConfig.DEBUG }
 
     viewModel { FeedViewModel(interactor = get(), application = get(), schedulersProvider = get(), router = get()) }
+    viewModel { StarredViewModel(interactor = get(), application = get(), schedulersProvider = get(), router = get()) }
+    viewModel { ProfileViewModel(interactor = get(), application = get(), schedulersProvider = get(), router = get()) }
 }

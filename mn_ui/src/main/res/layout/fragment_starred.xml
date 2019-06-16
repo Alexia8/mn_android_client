@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.alexiacdura.mn_ui.ui.feed.FeedViewModel" />
+            type="com.alexiacdura.mn_ui.ui.starred.StarredViewModel" />
     </data>
 
     <FrameLayout
@@ -66,7 +66,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:viewModel="@{viewModel.feedPostsViewModel}"
+                    app:viewModel="@{viewModel.starredPostsViewModel}"
                     app:visible="@{viewModel.feedVisible}"
                     tools:visibility="visible" />
 
