@@ -39,7 +39,9 @@ class FeedPostsView @JvmOverloads constructor(
                 false
             )
             adapter = DefaultMutableAnyAdapter(diffCallbackBuilder = ::createCallback)
+            setItemViewCacheSize(3)
         }
+
     }
 
     override fun bind(viewModel: FeedPostsViewModel) {

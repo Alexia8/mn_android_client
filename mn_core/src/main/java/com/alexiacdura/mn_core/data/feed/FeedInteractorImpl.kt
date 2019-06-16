@@ -8,9 +8,9 @@ import io.reactivex.Observable
 internal class FeedInteractorImpl(
     private val userFeedInteractor: UserFeedInteractor
 ) : FeedInteractor {
-    private var userId: Int = 1
+    private var userId: Int = 0
     private var limFrom: Int = 0
-    private var limTo: Int = 5
+    private var limTo: Int = 0
     override fun createFeedStateObservable(
         eventsObservable: Observable<FeedEvent>,
         userId: Int,

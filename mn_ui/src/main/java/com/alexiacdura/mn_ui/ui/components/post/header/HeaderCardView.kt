@@ -3,6 +3,8 @@ package com.alexiacdura.mn_ui.ui.components.post.header
 import android.content.Context
 import android.os.Build
 import android.util.AttributeSet
+import android.view.KeyEvent
+import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.cardview.widget.CardView
@@ -11,6 +13,7 @@ import com.alexiacdura.mn_ui.core.binding.BindableView
 import com.alexiacdura.mn_ui.core.binding.viewBinding
 import com.alexiacdura.mn_ui.core.binding.viewModel
 import com.alexiacdura.mn_ui.databinding.ViewPostHeaderBinding
+import com.alexiacdura.mn_ui.ui.feed.FeedUiEvent
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
@@ -39,6 +42,15 @@ class HeaderCardView @JvmOverloads constructor(
         binding.youtubeWebView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
                 return false
+            }
+
+            override fun shouldOverrideKeyEvent(view: WebView?, event: KeyEvent?): Boolean {
+                return true
+            }
+
+            override fun onPageFinished(view: WebView, url: String) {
+                binding.bodyPostImage.visibility = View.GONE
+                binding.youtubeWebView.visibility = View.VISIBLE
             }
         }
         val webSettings = binding.youtubeWebView.settings

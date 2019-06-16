@@ -8,6 +8,7 @@ import com.alexiacdura.mn_core.data.user.states.UserStarredState
 import com.alexiacdura.mn_ui.BR
 import com.alexiacdura.mn_ui.core.binding.bindableProperty
 import com.alexiacdura.mn_ui.ui.components.post.header.HeaderCardViewModel
+import com.alexiacdura.mn_ui.ui.feed.FeedUiEvent
 import kotlin.reflect.KFunction1
 
 

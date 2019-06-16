@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavArgument
 import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
 import com.alexiacdura.mn_ui.core.utils.resources.AppConstants
@@ -18,24 +19,27 @@ import org.koin.android.ext.android.inject
 
 class MusicnerdsActivity : AppCompatActivity() {
 
-    private lateinit var textMessage: TextView
     private var actionBar: ActionBar? = null
 
     private val router: MusicnerdsRouter by inject()
     private lateinit var navController: NavController
+    private var userId: Int = 0
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_feed -> {
                 actionBar!!.title = getString(R.string.title_feed)
+                router.openFeedFragment(userId)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_favourites -> {
                 actionBar!!.title = getString(R.string.title_favourites)
+                router.openStarredFragment(userId)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_profile -> {
                 actionBar!!.title = getString(R.string.title_profile)
+                router.openProfileFragment(userId)
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -46,10 +50,18 @@ class MusicnerdsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_musicnerds)
 
+        userId = intent.getIntExtra(AppConstants.INTENT_USER, 0)
+
         setupToolbar()
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.navHostFragment, FeedFragment.newInstance(userId))
+                .commitNow()
+        }
 
         navController = findNavController(this, R.id.navHostFragment)
         router.navController = navController

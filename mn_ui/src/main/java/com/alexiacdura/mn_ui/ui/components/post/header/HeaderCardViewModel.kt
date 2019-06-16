@@ -1,6 +1,7 @@
 package com.alexiacdura.mn_ui.ui.components.post.header
 
 import com.alexiacdura.mn_core.data.models.FeedPost
+import com.alexiacdura.mn_ui.ui.feed.FeedUiEvent
 import kotlin.reflect.KFunction1
 
 data class HeaderCardViewModel(

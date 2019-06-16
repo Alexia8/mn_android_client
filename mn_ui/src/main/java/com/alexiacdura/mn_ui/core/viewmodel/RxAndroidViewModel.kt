@@ -18,5 +18,4 @@ abstract class RxAndroidViewModel(application: Application) : AndroidViewModel(a
         disposables.clear()
         super.onCleared()
     }
-
 }
