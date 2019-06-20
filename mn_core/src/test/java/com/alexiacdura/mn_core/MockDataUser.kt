@@ -1,6 +1,7 @@
 import com.alexiacdura.mn_core.data.models.FeedPost
 import com.alexiacdura.mn_core.data.models.User
 import com.alexiacdura.mn_core.data.models.UserData
+import org.omg.CORBA.Object
 import java.net.URL
 
 @Suppress("MaxLineLength", "MagicNumber")
@@ -149,10 +150,10 @@ fun getTestFeedPostUserStarred(): FeedPost {
 
 @Suppress("MaxLineLength", "MagicNumber")
 fun getTestUserData(): UserData {
-    val followingsList = listOf<UserData.User>()
-    val followersList = listOf<UserData.User>()
+    val followingsList = listOf<UserData.UserFollow>()
+    val followersList = listOf<UserData.UserFollow>()
 
-    val following = object : UserData.User {
+    val following = object : UserData.UserFollow {
         override val id = 2
         override val username = "Mircea Teodor Oprea"
         override val email = "mirceateodor.oprea@gmail.com"
@@ -166,8 +167,15 @@ fun getTestUserData(): UserData {
     return object : UserData {
         override val postQuantity = 8
         override val starredQuantity = 3
-        override val followings = followingsList
-        override val followers = followersList
+        override val followings: List<UserData.UserFollow> = followingsList
+        override val followers: List<UserData.UserFollow> = followersList
+        override val postUser: UserData.User = object : UserData.User {
+            override val id: Int = 1
+            override val username: String = "Alexia C Dura"
+            override val email: String = "alexiacdura@gmail.com"
+            override val imageUrl: URL? = URL("")
+            override val styles: List<UserData.User.Style> = emptyList()
+        }
     }
 }
 

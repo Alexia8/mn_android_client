@@ -27,6 +27,7 @@ internal class StarredFragment : Fragment() {
         setupBinding(inflater.context, container)
 
         binding.feedPostsView.setOnLoadMoreCallback(::onLoadMore)
+        binding.feedScrollView.isNestedScrollingEnabled = false
 
         viewModel.init(args.userId)
 

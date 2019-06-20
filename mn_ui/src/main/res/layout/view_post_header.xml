@@ -21,7 +21,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/userImage"
@@ -39,7 +39,7 @@
             <TextView
                 android:id="@+id/username"
                 style="@style/Style.HeaderView.Username"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="@{() -> headerViewModel.onUserNameClick()}"
                 android:paddingStart="@dimen/small_8"
@@ -76,8 +76,8 @@
                 style="@style/Style.HeaderView.Date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/xsmall_4"
                 android:paddingStart="@dimen/base_16"
+                android:paddingTop="@dimen/xsmall_4"
                 android:paddingEnd="@dimen/base_16"
                 android:text="@{headerViewModel.datePost}"
                 android:textStyle="normal"
@@ -90,7 +90,7 @@
             <ImageView
                 android:id="@+id/bodyPostImage"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="143dp"
                 android:layout_marginTop="12dp"
                 android:background="@mipmap/youtube_placeholder"
                 android:contentDescription="@null"
@@ -99,16 +99,26 @@
                 app:layout_constraintStart_toEndOf="@id/userImage"
                 app:layout_constraintTop_toBottomOf="@id/postTitle" />
 
-            <WebView
-                android:id="@+id/youtubeWebView"
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtubeView"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="143dp"
                 android:layout_marginTop="12dp"
-                android:scaleType="centerInside"
-                android:visibility="gone"
+                android:visibility="invisible"
+                app:autoPlay="false"
                 app:layout_constraintStart_toEndOf="@id/userImage"
                 app:layout_constraintTop_toBottomOf="@id/postTitle"
                 tools:background="@mipmap/sample_post_image" />
+
+            <com.alexiacdura.mn_ui.ui.components.post.footer.FooterCardView
+                android:id="@+id/footerView"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/youtubeView"
+                app:viewModel="@{headerViewModel.footerCardViewModel}"
+                tools:showIn="@layout/view_feedposts" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

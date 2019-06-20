@@ -2,6 +2,7 @@ package com.alexiacdura.mn_ui.ui.components.user
 
 import androidx.databinding.Bindable
 import androidx.databinding.Observable
+import com.alexiacdura.mn_core.data.models.User
 import com.alexiacdura.mn_core.data.models.UserData
 import com.alexiacdura.mn_core.data.user.states.UserDataState
 
@@ -14,7 +15,7 @@ interface UserCardViewModel : Observable {
     val loadingVisible: Boolean
 
     @get:Bindable
-    var username: String
+    var user: UserData.User
 
     @get:Bindable
     var postQuantity: String
@@ -23,13 +24,13 @@ interface UserCardViewModel : Observable {
     var starredQuantity: String
 
     @get:Bindable
-    var followersList: List<UserData.User>
+    var followersList: List<UserData.UserFollow>
 
     @get:Bindable
-    var followingsList: List<UserData.User>
+    var followingsList: List<UserData.UserFollow>
 
-    fun followersClick(followersList: List<UserData.User>)
-    fun followingsClick(followingsList: List<UserData.User>)
+    fun followersClick(followersList: List<UserData.UserFollow>)
+    fun followingsClick(followingsList: List<UserData.UserFollow>)
 
     fun update(state: UserDataState)
 }

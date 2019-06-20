@@ -20,7 +20,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingStart="@dimen/base_16"
+            android:paddingStart="8dp"
             android:paddingTop="@dimen/base_16"
             android:paddingEnd="@dimen/base_16"
             android:paddingBottom="@dimen/base_16">
@@ -29,9 +29,9 @@
                 android:id="@+id/userImage"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:background="@drawable/ic_default_user_icon"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@drawable/ic_default_user_icon" />
 
             <TextView
                 android:id="@+id/username"
@@ -39,7 +39,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="@dimen/xsmall_4"
-                android:text="Alexia C Dura"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

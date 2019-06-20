@@ -28,6 +28,8 @@ internal class FeedFragment : Fragment() {
 
         binding.feedPostsView.setOnLoadMoreCallback(::onLoadMore)
 
+        binding.feedScrollView.isNestedScrollingEnabled = false
+
         viewModel.init(getUserId())
 
         return binding.root

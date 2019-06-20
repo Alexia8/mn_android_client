@@ -39,7 +39,7 @@ class FeedPostsView @JvmOverloads constructor(
                 false
             )
             adapter = DefaultMutableAnyAdapter(diffCallbackBuilder = ::createCallback)
-            setItemViewCacheSize(3)
+            setItemViewCacheSize(15)
         }
 
     }

@@ -1,6 +1,7 @@
 package com.alexiacdura.mn_ui.ui.feed
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.alexiacdura.mn_core.core.rx.SchedulersProvider
 import com.alexiacdura.mn_core.data.feed.FeedEvent
@@ -35,7 +36,13 @@ internal class FeedViewModel(
     val errorViewModel = MutableLiveData<ErrorViewModel>().apply { value = ErrorViewModel() }
     val loadingViewModel = MutableLiveData<LoadingLayoutViewModel>().apply { value = LoadingLayoutViewModel() }
 
-    val feedPostsViewModel = FeedPostsViewModelImpl(::userImageCallback, ::userNameCallback)
+    val feedPostsViewModel = FeedPostsViewModelImpl(
+        ::userImageCallback,
+        ::userNameCallback,
+        ::clickStarTextCallback,
+        ::clickVoteTextCallback,
+        ::clickDownVoteTextCallback
+    )
 
 
     fun init(userId: Int) {
@@ -125,6 +132,18 @@ internal class FeedViewModel(
         if (this.userId != user.id) {
             router.openProfileFragment(user.id)
         }
+    }
+
+    private fun clickStarTextCallback(starList: List<FeedPost.Star>) {
+        Log.d("FeedViewModel", " clicked on star list")
+    }
+
+    private fun clickVoteTextCallback(votesList: List<FeedPost.Vote>) {
+        Log.d("FeedViewModel", " clicked on upVotes list")
+    }
+
+    private fun clickDownVoteTextCallback(downVotesList: List<FeedPost.Vote>) {
+        Log.d("FeedViewModel", " clicked on downVotes list")
     }
 }
 

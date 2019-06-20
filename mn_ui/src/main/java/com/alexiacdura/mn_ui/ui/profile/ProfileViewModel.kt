@@ -19,7 +19,6 @@ import com.alexiacdura.mn_ui.ui.components.error.ErrorViewModel
 import com.alexiacdura.mn_ui.ui.components.feedpost.FeedPostsViewModelImpl
 import com.alexiacdura.mn_ui.ui.components.loading.LoadingLayoutViewModel
 import com.alexiacdura.mn_ui.ui.components.user.UserCardViewModelImpl
-
 import io.reactivex.subjects.PublishSubject
 
 internal class ProfileViewModel(
@@ -40,7 +39,13 @@ internal class ProfileViewModel(
     val errorViewModel = MutableLiveData<ErrorViewModel>().apply { value = ErrorViewModel() }
     val loadingViewModel = MutableLiveData<LoadingLayoutViewModel>().apply { value = LoadingLayoutViewModel() }
 
-    val userPostsViewModel = FeedPostsViewModelImpl(::userImageCallback, ::userNameCallback)
+    val userPostsViewModel = FeedPostsViewModelImpl(
+        ::userImageCallback,
+        ::userNameCallback,
+        ::clickStarTextCallback,
+        ::clickVoteTextCallback,
+        ::clickDownVoteTextCallback
+    )
     val userCardViewModel = UserCardViewModelImpl(::followersCallback, ::followingsCallback)
 
     fun init(userId: Int) {
@@ -136,12 +141,24 @@ internal class ProfileViewModel(
         }
     }
 
-    private fun followersCallback(followesList: List<UserData.User>) {
+    private fun followersCallback(followesList: List<UserData.UserFollow>) {
         Log.d("ProfileViewModel", "Followers click")
     }
 
-    private fun followingsCallback(followingsList: List<UserData.User>) {
+    private fun followingsCallback(followingsList: List<UserData.UserFollow>) {
         Log.d("ProfileViewModel", "Following click")
+    }
+
+    private fun clickStarTextCallback(starList: List<FeedPost.Star>) {
+        Log.d("ProfileViewModel", " clicked on star list")
+    }
+
+    private fun clickVoteTextCallback(votesList: List<FeedPost.Vote>) {
+        Log.d("ProfileViewModel", " clicked on upVotes list")
+    }
+
+    private fun clickDownVoteTextCallback(downVotesList: List<FeedPost.Vote>) {
+        Log.d("ProfileViewModel", " clicked on downVotes list")
     }
 }
 

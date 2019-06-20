@@ -166,7 +166,7 @@ class UserApiImplTest {
     }
 
     //UserData end point
-    @Test
+   /** @Test
     fun `get user request network response user data`() {
         val testUserData = getTestUserData()
 
@@ -178,6 +178,7 @@ class UserApiImplTest {
 
         CommonMockUtilsUser.assertUserDataEquals(testUserData, responseUserData)
     }
+   */
 
 
     @Test
