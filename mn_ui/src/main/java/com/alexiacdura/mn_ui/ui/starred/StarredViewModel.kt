@@ -1,12 +1,16 @@
 package com.alexiacdura.mn_ui.ui.starred
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.alexiacdura.mn_core.core.rx.SchedulersProvider
 import com.alexiacdura.mn_core.data.feed.FeedEvent
 import com.alexiacdura.mn_core.data.feed.FeedInteractor
 import com.alexiacdura.mn_core.data.feed.FeedState
 import com.alexiacdura.mn_core.data.models.FeedPost
+import com.alexiacdura.mn_core.data.models.UserData
+import com.alexiacdura.mn_core.data.star.states.CreateStarState
+import com.alexiacdura.mn_core.data.star.states.DeleteStarState
 import com.alexiacdura.mn_core.data.user.states.UserStarredState
 import com.alexiacdura.mn_ui.MusicnerdsRouter
 import com.alexiacdura.mn_ui.R
@@ -35,7 +39,13 @@ internal class StarredViewModel(
     val errorViewModel = MutableLiveData<ErrorViewModel>().apply { value = ErrorViewModel() }
     val loadingViewModel = MutableLiveData<LoadingLayoutViewModel>().apply { value = LoadingLayoutViewModel() }
 
-    val starredPostsViewModel = FeedPostsViewModelImpl(::userImageCallback, ::userNameCallback)
+    val starredPostsViewModel = FeedPostsViewModelImpl(
+        ::userImageCallback,
+        ::userNameCallback,
+        ::clickStarTextCallback,
+        ::clickVoteTextCallback,
+        ::clickDownVoteTextCallback
+    )
 
     fun init(userId: Int) {
         this.userId = userId
@@ -119,6 +129,18 @@ internal class StarredViewModel(
 
     private fun userNameCallback(user: FeedPost.UserPost) {
         router.openProfileFragment(user.id)
+    }
+
+    private fun clickStarTextCallback(starList: List<FeedPost.Star>) {
+        Log.d("starredViewModel", " clicked on star list")
+    }
+
+    private fun clickVoteTextCallback(votesList: List<FeedPost.Vote>) {
+        Log.d("starredViewModel", " clicked on upVotes list")
+    }
+
+    private fun clickDownVoteTextCallback(downVotesList: List<FeedPost.Vote>) {
+        Log.d("starredViewModel", " clicked on downVotes list")
     }
 }
 

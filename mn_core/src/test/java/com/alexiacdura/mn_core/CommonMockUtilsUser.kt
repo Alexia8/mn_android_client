@@ -51,8 +51,8 @@ object CommonMockUtilsUser {
         Assert.assertEquals(expected.feedPostDate, actual.feedPostDate)
         assertUserPostEquals(expected.feedPostUser, actual.feedPostUser)
         assertPostEquals(expected.feedPostData, actual.feedPostData)
-        assertPostListStarsEquals(expected.feedPostStars, actual.feedPostStars)
-        assertPostListVotesEquals(expected.feedPostVotes, actual.feedPostVotes)
+        assertPostListStarsEquals(expected.feedPostStars!!, actual.feedPostStars!!)
+        assertPostListVotesEquals(expected.feedPostVotes!!, actual.feedPostVotes!!)
     }
 
     private fun assertUserPostEquals(expected: FeedPost.UserPost, actual: FeedPost.UserPost) {
@@ -136,7 +136,7 @@ object CommonMockUtilsUser {
         assertUserDataUserEquals(expected.followers, actual.followers)
     }
 
-    private fun assertUserDataUserEquals(expected: List<UserData.User>, actual: List<UserData.User>) {
+    private fun assertUserDataUserEquals(expected: List<UserData.UserFollow>, actual: List<UserData.UserFollow>) {
         expected.forEach { user ->
             actual.forEach { actualUser ->
                 Assert.assertEquals(user.id, actualUser.id)

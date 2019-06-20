@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="footerViewModel"
+            type="com.alexiacdura.mn_ui.ui.components.post.footer.FooterCardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_8"
+        android:background="@android:color/transparent">
+
+        <View
+            android:id="@+id/voteBackground"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="@dimen/large_24"
+            android:background="@drawable/btn_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/voteIcon" />
+
+        <ImageView
+            android:id="@+id/voteIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:paddingStart="9dp"
+            android:paddingTop="5dp"
+            android:tint="@color/white_100"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_thumbs_up" />
+
+        <TextView
+            android:id="@+id/voteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:onClick="@{() -> footerViewModel.clickVoteText()}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/font_base_14"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/voteIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="5" />
+
+        <View
+            android:id="@+id/starBackground"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/starIcon" />
+
+        <ImageView
+            android:id="@+id/starIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:paddingStart="9dp"
+            android:paddingTop="5dp"
+            android:tint="@color/white_100"
+            app:layout_constraintStart_toStartOf="@id/starBackground"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_star_icon" />
+
+        <TextView
+            android:id="@+id/starText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:onClick="@{() -> footerViewModel.clickStarText()}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/font_base_14"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/starIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="3" />
+
+
+        <View
+            android:id="@+id/downVoteBackground"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/user_card_margin_row"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/btn_background"
+            app:layout_constraintEnd_toStartOf="@id/downVoteText"
+            app:layout_constraintTop_toTopOf="@id/downVoteIcon" />
+
+        <ImageView
+            android:id="@+id/downVoteIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:tint="@color/white_100"
+            app:layout_constraintStart_toStartOf="@id/downVoteBackground"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_dislike_thumb" />
+
+        <TextView
+            android:id="@+id/downVoteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="@{() -> footerViewModel.clickDownVoteText()}"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/font_base_14"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

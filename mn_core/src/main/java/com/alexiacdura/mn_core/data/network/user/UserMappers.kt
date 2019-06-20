@@ -3,6 +3,7 @@ package com.alexiacdura.mn_core.data.network.user
 import com.alexiacdura.mn_core.data.models.FeedPost
 import com.alexiacdura.mn_core.data.models.User
 import com.alexiacdura.mn_core.data.models.UserData
+import com.alexiacdura.mn_core.data.models.UserData.User.Style
 import com.alexiacdura.mn_core.data.network.entities.FeedPostEntity
 import com.alexiacdura.mn_core.data.network.entities.UserDataEntity
 import com.alexiacdura.mn_core.data.network.entities.UserEntity
@@ -123,6 +124,7 @@ private fun UserEntity.userStyles(): List<User.Style> {
 @Suppress("ThrowsCount")
 internal fun UserDataEntity.toUserData(): UserData {
     return object : UserData {
+        override val postUser: UserData.User = toDataUser()
         override val postQuantity = this@toUserData.postQuantity
         override val starredQuantity = this@toUserData.starredQuantity
         override val followings = userFollowings()
@@ -130,9 +132,28 @@ internal fun UserDataEntity.toUserData(): UserData {
     }
 }
 
-private fun UserDataEntity.userFollowings(): List<UserData.User> {
+private fun UserDataEntity.toDataUser(): UserData.User {
+    return object : UserData.User {
+        override val id = this@toDataUser.userPost.userId
+        override val username = this@toDataUser.userPost.username
+        override val email = this@toDataUser.userPost.email
+        override val imageUrl = this@toDataUser.userPost.imageUrl
+        override val styles = userDataStyles()
+    }
+}
+
+private fun UserDataEntity.userDataStyles(): List<Style> {
+    return userPost.styles.map {
+        object : Style {
+            override val id = it.id
+            override val name = it.name
+        }
+    }
+}
+
+private fun UserDataEntity.userFollowings(): List<UserData.UserFollow> {
     return followings.map {
-        object : UserData.User {
+        object : UserData.UserFollow {
             override val id = it.id
             override val username = it.username
             override val email = it.email
@@ -141,9 +162,9 @@ private fun UserDataEntity.userFollowings(): List<UserData.User> {
     }
 }
 
-private fun UserDataEntity.userFollowers(): List<UserData.User> {
+private fun UserDataEntity.userFollowers(): List<UserData.UserFollow> {
     return followers.map {
-        object : UserData.User {
+        object : UserData.UserFollow {
             override val id = it.id
             override val username = it.username
             override val email = it.email

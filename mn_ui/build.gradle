@@ -51,30 +51,29 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':mn_core')
-
     //navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
-
     //Lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:${lifecycleExtensionsVersion}"
-
     //test
     testImplementation "junit:junit:${junitVersion}"
     testImplementation "org.mockito:mockito-core:${mockitoVersion}"
     testImplementation "com.squareup.assertj:assertj-android:${assertjVersion}"
-
     //Androidx
     api "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}"
     api "androidx.recyclerview:recyclerview:${recyclerviewVersion}"
     api "androidx.appcompat:appcompat:${appcompatVersion}"
     api "androidx.annotation:annotation:${annotationVersion}"
     api "androidx.palette:palette:${paletteVersion}"
-
     //picasso
     api "com.squareup.picasso:picasso:${picassoVersion}"
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    //YouTubeVideo
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.3'
 }
 
 configurations.all {

@@ -22,7 +22,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:viewModel="@{viewModel.headerCardViewModel}"
-            tools:showIn="@layout/view_feedposts"/>
+            tools:showIn="@layout/view_feedposts" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

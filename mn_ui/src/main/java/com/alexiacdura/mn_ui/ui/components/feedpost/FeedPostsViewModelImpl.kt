@@ -7,14 +7,17 @@ import com.alexiacdura.mn_core.data.user.states.UserPostsState
 import com.alexiacdura.mn_core.data.user.states.UserStarredState
 import com.alexiacdura.mn_ui.BR
 import com.alexiacdura.mn_ui.core.binding.bindableProperty
+import com.alexiacdura.mn_ui.ui.components.post.footer.FooterCardViewModel
 import com.alexiacdura.mn_ui.ui.components.post.header.HeaderCardViewModel
-import com.alexiacdura.mn_ui.ui.feed.FeedUiEvent
 import kotlin.reflect.KFunction1
 
 
 class FeedPostsViewModelImpl(
-    private var userImageCallback: KFunction1<@ParameterName(name = "user") FeedPost.UserPost, Unit>?,
-    private var userNameCallback: KFunction1<@ParameterName(name = "user") FeedPost.UserPost, Unit>?
+    private var userImageCallback: KFunction1<@ParameterName(name = "userImageCallback") FeedPost.UserPost, Unit>?,
+    private var userNameCallback: KFunction1<@ParameterName(name = "userNameCallBack") FeedPost.UserPost, Unit>?,
+    private var clickStarTextCallback: KFunction1<@ParameterName(name = "clickStarText") List<FeedPost.Star>, Unit>?,
+    private var clickVoteTextCallback: KFunction1<@ParameterName(name = "clickVoteText") List<FeedPost.Vote>, Unit>?,
+    private var clickDownVoteTextCallback: KFunction1<@ParameterName(name = "clickDownVoteText") List<FeedPost.Vote>, Unit>?
 ) : BaseObservable(), FeedPostsViewModel {
 
     override var contentVisible by bindableProperty(false, BR.contentVisible)
@@ -23,10 +26,7 @@ class FeedPostsViewModelImpl(
     override var loadingVisible by bindableProperty(false, BR.loadingVisible)
         private set
 
-    override var items: List<FeedPostsItemViewModel> by bindableProperty(
-        emptyList(),
-        BR.items
-    )
+    override var items: List<FeedPostsItemViewModel> by bindableProperty(emptyList(), BR.items)
         private set
 
     override fun update(state: Any) {
@@ -34,7 +34,6 @@ class FeedPostsViewModelImpl(
             is UserFeedState -> updateFeedView(state)
             is UserStarredState -> updateStarredView(state)
             is UserPostsState -> updateUserView(state)
-
         }
     }
 
@@ -87,7 +86,13 @@ class FeedPostsViewModelImpl(
             HeaderCardViewModel(
                 this,
                 userImageCallback,
-                userNameCallback
+                userNameCallback,
+                FooterCardViewModel(
+                    this,
+                    clickStarTextCallback,
+                    clickVoteTextCallback,
+                    clickDownVoteTextCallback
+                )
             )
         )
     }
